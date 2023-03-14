@@ -1,0 +1,627 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		189049FE29C0642900123C9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189049FD29C0642900123C9E /* AppDelegate.swift */; };
+		18904A0029C0642900123C9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189049FF29C0642900123C9E /* SceneDelegate.swift */; };
+		18904A0229C0642900123C9E /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A0129C0642900123C9E /* ContainerViewController.swift */; };
+		18904A0729C0643000123C9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18904A0629C0643000123C9E /* Assets.xcassets */; };
+		18904A0A29C0643000123C9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18904A0829C0643000123C9E /* LaunchScreen.storyboard */; };
+		18904A1529C0643100123C9E /* iPod_U2_AudioPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A1429C0643100123C9E /* iPod_U2_AudioPlayerTests.swift */; };
+		18904A1F29C0643100123C9E /* iPod_U2_AudioPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A1E29C0643100123C9E /* iPod_U2_AudioPlayerUITests.swift */; };
+		18904A2129C0643100123C9E /* iPod_U2_AudioPlayerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A2029C0643100123C9E /* iPod_U2_AudioPlayerUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		18904A1129C0643100123C9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 189049F229C0642800123C9E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 189049F929C0642900123C9E;
+			remoteInfo = "iPod U2 AudioPlayer";
+		};
+		18904A1B29C0643100123C9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 189049F229C0642800123C9E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 189049F929C0642900123C9E;
+			remoteInfo = "iPod U2 AudioPlayer";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		189049FA29C0642900123C9E /* iPod U2 AudioPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iPod U2 AudioPlayer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		189049FD29C0642900123C9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		189049FF29C0642900123C9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		18904A0129C0642900123C9E /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		18904A0629C0643000123C9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18904A0929C0643000123C9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18904A0B29C0643000123C9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18904A1029C0643100123C9E /* iPod U2 AudioPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iPod U2 AudioPlayerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18904A1429C0643100123C9E /* iPod_U2_AudioPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPod_U2_AudioPlayerTests.swift; sourceTree = "<group>"; };
+		18904A1A29C0643100123C9E /* iPod U2 AudioPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iPod U2 AudioPlayerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18904A1E29C0643100123C9E /* iPod_U2_AudioPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPod_U2_AudioPlayerUITests.swift; sourceTree = "<group>"; };
+		18904A2029C0643100123C9E /* iPod_U2_AudioPlayerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPod_U2_AudioPlayerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		189049F729C0642900123C9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18904A0D29C0643000123C9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18904A1729C0643100123C9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		189049F129C0642800123C9E = {
+			isa = PBXGroup;
+			children = (
+				189049FC29C0642900123C9E /* iPod U2 AudioPlayer */,
+				18904A1329C0643100123C9E /* iPod U2 AudioPlayerTests */,
+				18904A1D29C0643100123C9E /* iPod U2 AudioPlayerUITests */,
+				189049FB29C0642900123C9E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		189049FB29C0642900123C9E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				189049FA29C0642900123C9E /* iPod U2 AudioPlayer.app */,
+				18904A1029C0643100123C9E /* iPod U2 AudioPlayerTests.xctest */,
+				18904A1A29C0643100123C9E /* iPod U2 AudioPlayerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		189049FC29C0642900123C9E /* iPod U2 AudioPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				18904A2D29C0644500123C9E /* App */,
+				18904A2E29C0644E00123C9E /* Screens */,
+				18904A0629C0643000123C9E /* Assets.xcassets */,
+				18904A0829C0643000123C9E /* LaunchScreen.storyboard */,
+				18904A0B29C0643000123C9E /* Info.plist */,
+			);
+			path = "iPod U2 AudioPlayer";
+			sourceTree = "<group>";
+		};
+		18904A1329C0643100123C9E /* iPod U2 AudioPlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				18904A1429C0643100123C9E /* iPod_U2_AudioPlayerTests.swift */,
+			);
+			path = "iPod U2 AudioPlayerTests";
+			sourceTree = "<group>";
+		};
+		18904A1D29C0643100123C9E /* iPod U2 AudioPlayerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				18904A1E29C0643100123C9E /* iPod_U2_AudioPlayerUITests.swift */,
+				18904A2029C0643100123C9E /* iPod_U2_AudioPlayerUITestsLaunchTests.swift */,
+			);
+			path = "iPod U2 AudioPlayerUITests";
+			sourceTree = "<group>";
+		};
+		18904A2D29C0644500123C9E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				189049FD29C0642900123C9E /* AppDelegate.swift */,
+				189049FF29C0642900123C9E /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		18904A2E29C0644E00123C9E /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				18904A2F29C0645800123C9E /* Container */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		18904A2F29C0645800123C9E /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				18904A3029C0647E00123C9E /* Controller */,
+				18904A3129C0648600123C9E /* View */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
+		18904A3029C0647E00123C9E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18904A0129C0642900123C9E /* ContainerViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18904A3129C0648600123C9E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		189049F929C0642900123C9E /* iPod U2 AudioPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18904A2429C0643100123C9E /* Build configuration list for PBXNativeTarget "iPod U2 AudioPlayer" */;
+			buildPhases = (
+				189049F629C0642900123C9E /* Sources */,
+				189049F729C0642900123C9E /* Frameworks */,
+				189049F829C0642900123C9E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iPod U2 AudioPlayer";
+			productName = "iPod U2 AudioPlayer";
+			productReference = 189049FA29C0642900123C9E /* iPod U2 AudioPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		18904A0F29C0643000123C9E /* iPod U2 AudioPlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18904A2729C0643100123C9E /* Build configuration list for PBXNativeTarget "iPod U2 AudioPlayerTests" */;
+			buildPhases = (
+				18904A0C29C0643000123C9E /* Sources */,
+				18904A0D29C0643000123C9E /* Frameworks */,
+				18904A0E29C0643000123C9E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18904A1229C0643100123C9E /* PBXTargetDependency */,
+			);
+			name = "iPod U2 AudioPlayerTests";
+			productName = "iPod U2 AudioPlayerTests";
+			productReference = 18904A1029C0643100123C9E /* iPod U2 AudioPlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		18904A1929C0643100123C9E /* iPod U2 AudioPlayerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18904A2A29C0643100123C9E /* Build configuration list for PBXNativeTarget "iPod U2 AudioPlayerUITests" */;
+			buildPhases = (
+				18904A1629C0643100123C9E /* Sources */,
+				18904A1729C0643100123C9E /* Frameworks */,
+				18904A1829C0643100123C9E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18904A1C29C0643100123C9E /* PBXTargetDependency */,
+			);
+			name = "iPod U2 AudioPlayerUITests";
+			productName = "iPod U2 AudioPlayerUITests";
+			productReference = 18904A1A29C0643100123C9E /* iPod U2 AudioPlayerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		189049F229C0642800123C9E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					189049F929C0642900123C9E = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					18904A0F29C0643000123C9E = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 189049F929C0642900123C9E;
+					};
+					18904A1929C0643100123C9E = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 189049F929C0642900123C9E;
+					};
+				};
+			};
+			buildConfigurationList = 189049F529C0642800123C9E /* Build configuration list for PBXProject "iPod U2 AudioPlayer" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 189049F129C0642800123C9E;
+			productRefGroup = 189049FB29C0642900123C9E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				189049F929C0642900123C9E /* iPod U2 AudioPlayer */,
+				18904A0F29C0643000123C9E /* iPod U2 AudioPlayerTests */,
+				18904A1929C0643100123C9E /* iPod U2 AudioPlayerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		189049F829C0642900123C9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18904A0A29C0643000123C9E /* LaunchScreen.storyboard in Resources */,
+				18904A0729C0643000123C9E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18904A0E29C0643000123C9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18904A1829C0643100123C9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		189049F629C0642900123C9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18904A0229C0642900123C9E /* ContainerViewController.swift in Sources */,
+				189049FE29C0642900123C9E /* AppDelegate.swift in Sources */,
+				18904A0029C0642900123C9E /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18904A0C29C0643000123C9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18904A1529C0643100123C9E /* iPod_U2_AudioPlayerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18904A1629C0643100123C9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18904A1F29C0643100123C9E /* iPod_U2_AudioPlayerUITests.swift in Sources */,
+				18904A2129C0643100123C9E /* iPod_U2_AudioPlayerUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		18904A1229C0643100123C9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 189049F929C0642900123C9E /* iPod U2 AudioPlayer */;
+			targetProxy = 18904A1129C0643100123C9E /* PBXContainerItemProxy */;
+		};
+		18904A1C29C0643100123C9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 189049F929C0642900123C9E /* iPod U2 AudioPlayer */;
+			targetProxy = 18904A1B29C0643100123C9E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		18904A0829C0643000123C9E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18904A0929C0643000123C9E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18904A2229C0643100123C9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		18904A2329C0643100123C9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18904A2529C0643100123C9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iPod U2 AudioPlayer/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "totsamiianatolii.iPod-U2-AudioPlayer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18904A2629C0643100123C9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iPod U2 AudioPlayer/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "totsamiianatolii.iPod-U2-AudioPlayer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		18904A2829C0643100123C9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "totsamiianatolii.iPod-U2-AudioPlayerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iPod U2 AudioPlayer.app/iPod U2 AudioPlayer";
+			};
+			name = Debug;
+		};
+		18904A2929C0643100123C9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "totsamiianatolii.iPod-U2-AudioPlayerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iPod U2 AudioPlayer.app/iPod U2 AudioPlayer";
+			};
+			name = Release;
+		};
+		18904A2B29C0643100123C9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "totsamiianatolii.iPod-U2-AudioPlayerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "iPod U2 AudioPlayer";
+			};
+			name = Debug;
+		};
+		18904A2C29C0643100123C9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "totsamiianatolii.iPod-U2-AudioPlayerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "iPod U2 AudioPlayer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		189049F529C0642800123C9E /* Build configuration list for PBXProject "iPod U2 AudioPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18904A2229C0643100123C9E /* Debug */,
+				18904A2329C0643100123C9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18904A2429C0643100123C9E /* Build configuration list for PBXNativeTarget "iPod U2 AudioPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18904A2529C0643100123C9E /* Debug */,
+				18904A2629C0643100123C9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18904A2729C0643100123C9E /* Build configuration list for PBXNativeTarget "iPod U2 AudioPlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18904A2829C0643100123C9E /* Debug */,
+				18904A2929C0643100123C9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18904A2A29C0643100123C9E /* Build configuration list for PBXNativeTarget "iPod U2 AudioPlayerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18904A2B29C0643100123C9E /* Debug */,
+				18904A2C29C0643100123C9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 189049F229C0642800123C9E /* Project object */;
+}
