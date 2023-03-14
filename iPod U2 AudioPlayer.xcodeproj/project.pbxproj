@@ -15,6 +15,69 @@
 		18904A1529C0643100123C9E /* iPod_U2_AudioPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A1429C0643100123C9E /* iPod_U2_AudioPlayerTests.swift */; };
 		18904A1F29C0643100123C9E /* iPod_U2_AudioPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A1E29C0643100123C9E /* iPod_U2_AudioPlayerUITests.swift */; };
 		18904A2129C0643100123C9E /* iPod_U2_AudioPlayerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A2029C0643100123C9E /* iPod_U2_AudioPlayerUITestsLaunchTests.swift */; };
+		18904A3329C066E100123C9E /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A3229C066E100123C9E /* ContainerView.swift */; };
+		18904A3529C0672600123C9E /* ControlModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A3429C0672600123C9E /* ControlModule.swift */; };
+		18904A3A29C067AD00123C9E /* PlayerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A3929C067AD00123C9E /* PlayerButton.swift */; };
+		18904A3D29C0681F00123C9E /* EnumsForProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A3C29C0681F00123C9E /* EnumsForProject.swift */; };
+		18904A4029C0688300123C9E /* IPodGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A3F29C0688300123C9E /* IPodGestureRecognizer.swift */; };
+		18904A4329C0692C00123C9E /* CGFloat+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A4229C0692C00123C9E /* CGFloat+.swift */; };
+		18904A4629C069CC00123C9E /* ProtocolsForProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A4529C069CC00123C9E /* ProtocolsForProject.swift */; };
+		18904A4929C06A3400123C9E /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A4829C06A3400123C9E /* Images.swift */; };
+		18904A4C29C06AD400123C9E /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A4B29C06AD400123C9E /* Fonts.swift */; };
+		18904A4F29C06B0700123C9E /* MarkPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18904A4E29C06B0700123C9E /* MarkPro-Bold.ttf */; };
+		18904A5029C06B0700123C9E /* MarkPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18904A4E29C06B0700123C9E /* MarkPro-Bold.ttf */; };
+		18904A5129C06B0700123C9E /* MarkPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18904A4E29C06B0700123C9E /* MarkPro-Bold.ttf */; };
+		18904A5329C06B7900123C9E /* SelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A5229C06B7900123C9E /* SelectButton.swift */; };
+		18904A5429C06B7900123C9E /* SelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A5229C06B7900123C9E /* SelectButton.swift */; };
+		18904A5529C06B7900123C9E /* SelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A5229C06B7900123C9E /* SelectButton.swift */; };
+		18904A5729C06BBD00123C9E /* UIButton+Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A5629C06BBD00123C9E /* UIButton+Target.swift */; };
+		18904A5829C06BBD00123C9E /* UIButton+Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A5629C06BBD00123C9E /* UIButton+Target.swift */; };
+		18904A5929C06BBD00123C9E /* UIButton+Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A5629C06BBD00123C9E /* UIButton+Target.swift */; };
+		18904A5B29C06BE600123C9E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A5A29C06BE600123C9E /* Colors.swift */; };
+		18904A5C29C06BE600123C9E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A5A29C06BE600123C9E /* Colors.swift */; };
+		18904A5D29C06BE600123C9E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A5A29C06BE600123C9E /* Colors.swift */; };
+		18904A5F29C06C2D00123C9E /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A5E29C06C2D00123C9E /* NavBarView.swift */; };
+		18904A6029C06C2D00123C9E /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A5E29C06C2D00123C9E /* NavBarView.swift */; };
+		18904A6129C06C2D00123C9E /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A5E29C06C2D00123C9E /* NavBarView.swift */; };
+		18904A6429C06C8E00123C9E /* UILabel+MyStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A6329C06C8E00123C9E /* UILabel+MyStyle.swift */; };
+		18904A6529C06C8E00123C9E /* UILabel+MyStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A6329C06C8E00123C9E /* UILabel+MyStyle.swift */; };
+		18904A6629C06C8E00123C9E /* UILabel+MyStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A6329C06C8E00123C9E /* UILabel+MyStyle.swift */; };
+		18904A6829C06CF400123C9E /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A6729C06CF400123C9E /* ProgressBar.swift */; };
+		18904A6929C06CF400123C9E /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A6729C06CF400123C9E /* ProgressBar.swift */; };
+		18904A6A29C06CF400123C9E /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A6729C06CF400123C9E /* ProgressBar.swift */; };
+		18904A6D29C06D6800123C9E /* ModelProgressTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A6C29C06D6800123C9E /* ModelProgressTrack.swift */; };
+		18904A6E29C06D6800123C9E /* ModelProgressTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A6C29C06D6800123C9E /* ModelProgressTrack.swift */; };
+		18904A6F29C06D6800123C9E /* ModelProgressTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A6C29C06D6800123C9E /* ModelProgressTrack.swift */; };
+		18904A7129C06DB600123C9E /* ModelTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A7029C06DB600123C9E /* ModelTrack.swift */; };
+		18904A7229C06DB600123C9E /* ModelTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A7029C06DB600123C9E /* ModelTrack.swift */; };
+		18904A7329C06DB600123C9E /* ModelTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A7029C06DB600123C9E /* ModelTrack.swift */; };
+		18904A7829C06E5700123C9E /* SelectTrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A7729C06E5700123C9E /* SelectTrackViewController.swift */; };
+		18904A7929C06E5700123C9E /* SelectTrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A7729C06E5700123C9E /* SelectTrackViewController.swift */; };
+		18904A7A29C06E5700123C9E /* SelectTrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A7729C06E5700123C9E /* SelectTrackViewController.swift */; };
+		18904A7C29C06EA500123C9E /* SelectTrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A7B29C06EA500123C9E /* SelectTrackView.swift */; };
+		18904A7D29C06EA500123C9E /* SelectTrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A7B29C06EA500123C9E /* SelectTrackView.swift */; };
+		18904A7E29C06EA500123C9E /* SelectTrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A7B29C06EA500123C9E /* SelectTrackView.swift */; };
+		18904A8029C06ED600123C9E /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A7F29C06ED600123C9E /* Sounds.swift */; };
+		18904A8129C06ED600123C9E /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A7F29C06ED600123C9E /* Sounds.swift */; };
+		18904A8229C06ED600123C9E /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A7F29C06ED600123C9E /* Sounds.swift */; };
+		18904A8529C06F1300123C9E /* liam_m-i-know.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18904A8429C06F1300123C9E /* liam_m-i-know.mp3 */; };
+		18904A8629C06F1300123C9E /* liam_m-i-know.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18904A8429C06F1300123C9E /* liam_m-i-know.mp3 */; };
+		18904A8729C06F1300123C9E /* liam_m-i-know.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18904A8429C06F1300123C9E /* liam_m-i-know.mp3 */; };
+		18904A8A29C06FF400123C9E /* PlayerAppSounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A8929C06FF400123C9E /* PlayerAppSounds.swift */; };
+		18904A8B29C06FF400123C9E /* PlayerAppSounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A8929C06FF400123C9E /* PlayerAppSounds.swift */; };
+		18904A8C29C06FF400123C9E /* PlayerAppSounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A8929C06FF400123C9E /* PlayerAppSounds.swift */; };
+		18904A8E29C0700F00123C9E /* schelchok-vyiklyucheniya.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18904A8D29C0700F00123C9E /* schelchok-vyiklyucheniya.mp3 */; };
+		18904A8F29C0700F00123C9E /* schelchok-vyiklyucheniya.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18904A8D29C0700F00123C9E /* schelchok-vyiklyucheniya.mp3 */; };
+		18904A9029C0700F00123C9E /* schelchok-vyiklyucheniya.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18904A8D29C0700F00123C9E /* schelchok-vyiklyucheniya.mp3 */; };
+		18904A9229C0702F00123C9E /* PlayerIPod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A9129C0702F00123C9E /* PlayerIPod.swift */; };
+		18904A9329C0702F00123C9E /* PlayerIPod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A9129C0702F00123C9E /* PlayerIPod.swift */; };
+		18904A9429C0702F00123C9E /* PlayerIPod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A9129C0702F00123C9E /* PlayerIPod.swift */; };
+		18904A9929C070D100123C9E /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A9829C070D100123C9E /* PlayerViewController.swift */; };
+		18904A9A29C070D100123C9E /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A9829C070D100123C9E /* PlayerViewController.swift */; };
+		18904A9B29C070D100123C9E /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A9829C070D100123C9E /* PlayerViewController.swift */; };
+		18904A9E29C0711600123C9E /* SelectTrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A9D29C0711600123C9E /* SelectTrackCell.swift */; };
+		18904A9F29C0711600123C9E /* SelectTrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A9D29C0711600123C9E /* SelectTrackCell.swift */; };
+		18904AA029C0711600123C9E /* SelectTrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A9D29C0711600123C9E /* SelectTrackCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +110,33 @@
 		18904A1A29C0643100123C9E /* iPod U2 AudioPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iPod U2 AudioPlayerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18904A1E29C0643100123C9E /* iPod_U2_AudioPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPod_U2_AudioPlayerUITests.swift; sourceTree = "<group>"; };
 		18904A2029C0643100123C9E /* iPod_U2_AudioPlayerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPod_U2_AudioPlayerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		18904A3229C066E100123C9E /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		18904A3429C0672600123C9E /* ControlModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlModule.swift; sourceTree = "<group>"; };
+		18904A3929C067AD00123C9E /* PlayerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerButton.swift; sourceTree = "<group>"; };
+		18904A3C29C0681F00123C9E /* EnumsForProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumsForProject.swift; sourceTree = "<group>"; };
+		18904A3F29C0688300123C9E /* IPodGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPodGestureRecognizer.swift; sourceTree = "<group>"; };
+		18904A4229C0692C00123C9E /* CGFloat+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+.swift"; sourceTree = "<group>"; };
+		18904A4529C069CC00123C9E /* ProtocolsForProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolsForProject.swift; sourceTree = "<group>"; };
+		18904A4829C06A3400123C9E /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		18904A4B29C06AD400123C9E /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		18904A4E29C06B0700123C9E /* MarkPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-Bold.ttf"; sourceTree = "<group>"; };
+		18904A5229C06B7900123C9E /* SelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectButton.swift; sourceTree = "<group>"; };
+		18904A5629C06BBD00123C9E /* UIButton+Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Target.swift"; sourceTree = "<group>"; };
+		18904A5A29C06BE600123C9E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		18904A5E29C06C2D00123C9E /* NavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarView.swift; sourceTree = "<group>"; };
+		18904A6329C06C8E00123C9E /* UILabel+MyStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+MyStyle.swift"; sourceTree = "<group>"; };
+		18904A6729C06CF400123C9E /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		18904A6C29C06D6800123C9E /* ModelProgressTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProgressTrack.swift; sourceTree = "<group>"; };
+		18904A7029C06DB600123C9E /* ModelTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTrack.swift; sourceTree = "<group>"; };
+		18904A7729C06E5700123C9E /* SelectTrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTrackViewController.swift; sourceTree = "<group>"; };
+		18904A7B29C06EA500123C9E /* SelectTrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTrackView.swift; sourceTree = "<group>"; };
+		18904A7F29C06ED600123C9E /* Sounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
+		18904A8429C06F1300123C9E /* liam_m-i-know.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "liam_m-i-know.mp3"; sourceTree = "<group>"; };
+		18904A8929C06FF400123C9E /* PlayerAppSounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerAppSounds.swift; sourceTree = "<group>"; };
+		18904A8D29C0700F00123C9E /* schelchok-vyiklyucheniya.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "schelchok-vyiklyucheniya.mp3"; sourceTree = "<group>"; };
+		18904A9129C0702F00123C9E /* PlayerIPod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerIPod.swift; sourceTree = "<group>"; };
+		18904A9829C070D100123C9E /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		18904A9D29C0711600123C9E /* SelectTrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTrackCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +189,7 @@
 			children = (
 				18904A2D29C0644500123C9E /* App */,
 				18904A2E29C0644E00123C9E /* Screens */,
+				18904A3629C0676800123C9E /* Library */,
 				18904A0629C0643000123C9E /* Assets.xcassets */,
 				18904A0829C0643000123C9E /* LaunchScreen.storyboard */,
 				18904A0B29C0643000123C9E /* Info.plist */,
@@ -135,6 +226,8 @@
 		18904A2E29C0644E00123C9E /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				18904A9529C0709000123C9E /* PlayerTrack */,
+				18904A7429C06E1100123C9E /* SelectTrack */,
 				18904A2F29C0645800123C9E /* Container */,
 			);
 			path = Screens;
@@ -143,6 +236,7 @@
 		18904A2F29C0645800123C9E /* Container */ = {
 			isa = PBXGroup;
 			children = (
+				18904A6B29C06D5100123C9E /* Model */,
 				18904A3029C0647E00123C9E /* Controller */,
 				18904A3129C0648600123C9E /* View */,
 			);
@@ -160,8 +254,191 @@
 		18904A3129C0648600123C9E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				18904A3229C066E100123C9E /* ContainerView.swift */,
+				18904A3429C0672600123C9E /* ControlModule.swift */,
+				18904A5E29C06C2D00123C9E /* NavBarView.swift */,
+				18904A6729C06CF400123C9E /* ProgressBar.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		18904A3629C0676800123C9E /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				18904A8829C06FD500123C9E /* Service */,
+				18904A8329C06F0300123C9E /* Sounds */,
+				18904A4D29C06AFD00123C9E /* Fonts */,
+				18904A4729C06A2500123C9E /* Constants */,
+				18904A4429C069B300123C9E /* Protocols */,
+				18904A3B29C067FC00123C9E /* Enums */,
+				18904A3729C0678000123C9E /* Extension */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		18904A3729C0678000123C9E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				18904A6229C06C7C00123C9E /* UILabel */,
+				18904A4129C0691900123C9E /* CGFloat */,
+				18904A3E29C0684D00123C9E /* GestureRecognizer */,
+				18904A3829C0678800123C9E /* UIButton */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		18904A3829C0678800123C9E /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				18904A3929C067AD00123C9E /* PlayerButton.swift */,
+				18904A5229C06B7900123C9E /* SelectButton.swift */,
+				18904A5629C06BBD00123C9E /* UIButton+Target.swift */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		18904A3B29C067FC00123C9E /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				18904A3C29C0681F00123C9E /* EnumsForProject.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		18904A3E29C0684D00123C9E /* GestureRecognizer */ = {
+			isa = PBXGroup;
+			children = (
+				18904A3F29C0688300123C9E /* IPodGestureRecognizer.swift */,
+			);
+			path = GestureRecognizer;
+			sourceTree = "<group>";
+		};
+		18904A4129C0691900123C9E /* CGFloat */ = {
+			isa = PBXGroup;
+			children = (
+				18904A4229C0692C00123C9E /* CGFloat+.swift */,
+			);
+			path = CGFloat;
+			sourceTree = "<group>";
+		};
+		18904A4429C069B300123C9E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				18904A4529C069CC00123C9E /* ProtocolsForProject.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		18904A4729C06A2500123C9E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				18904A4829C06A3400123C9E /* Images.swift */,
+				18904A4B29C06AD400123C9E /* Fonts.swift */,
+				18904A5A29C06BE600123C9E /* Colors.swift */,
+				18904A7F29C06ED600123C9E /* Sounds.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		18904A4D29C06AFD00123C9E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				18904A4E29C06B0700123C9E /* MarkPro-Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		18904A6229C06C7C00123C9E /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				18904A6329C06C8E00123C9E /* UILabel+MyStyle.swift */,
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
+		18904A6B29C06D5100123C9E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18904A6C29C06D6800123C9E /* ModelProgressTrack.swift */,
+				18904A7029C06DB600123C9E /* ModelTrack.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18904A7429C06E1100123C9E /* SelectTrack */ = {
+			isa = PBXGroup;
+			children = (
+				18904A7529C06E2100123C9E /* Controller */,
+				18904A7629C06E2800123C9E /* View */,
+			);
+			path = SelectTrack;
+			sourceTree = "<group>";
+		};
+		18904A7529C06E2100123C9E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18904A7729C06E5700123C9E /* SelectTrackViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18904A7629C06E2800123C9E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18904A7B29C06EA500123C9E /* SelectTrackView.swift */,
+				18904A9C29C070F500123C9E /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18904A8329C06F0300123C9E /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				18904A8D29C0700F00123C9E /* schelchok-vyiklyucheniya.mp3 */,
+				18904A8429C06F1300123C9E /* liam_m-i-know.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		18904A8829C06FD500123C9E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				18904A8929C06FF400123C9E /* PlayerAppSounds.swift */,
+				18904A9129C0702F00123C9E /* PlayerIPod.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		18904A9529C0709000123C9E /* PlayerTrack */ = {
+			isa = PBXGroup;
+			children = (
+				18904A9629C070A700123C9E /* Controller */,
+				18904A9729C070AD00123C9E /* View */,
+			);
+			path = PlayerTrack;
+			sourceTree = "<group>";
+		};
+		18904A9629C070A700123C9E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18904A9829C070D100123C9E /* PlayerViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18904A9729C070AD00123C9E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18904A9C29C070F500123C9E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				18904A9D29C0711600123C9E /* SelectTrackCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,7 +545,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18904A8529C06F1300123C9E /* liam_m-i-know.mp3 in Resources */,
+				18904A8E29C0700F00123C9E /* schelchok-vyiklyucheniya.mp3 in Resources */,
 				18904A0A29C0643000123C9E /* LaunchScreen.storyboard in Resources */,
+				18904A4F29C06B0700123C9E /* MarkPro-Bold.ttf in Resources */,
 				18904A0729C0643000123C9E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +557,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18904A8F29C0700F00123C9E /* schelchok-vyiklyucheniya.mp3 in Resources */,
+				18904A8629C06F1300123C9E /* liam_m-i-know.mp3 in Resources */,
+				18904A5029C06B0700123C9E /* MarkPro-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +567,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18904A9029C0700F00123C9E /* schelchok-vyiklyucheniya.mp3 in Resources */,
+				18904A8729C06F1300123C9E /* liam_m-i-know.mp3 in Resources */,
+				18904A5129C06B0700123C9E /* MarkPro-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,9 +580,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18904A5F29C06C2D00123C9E /* NavBarView.swift in Sources */,
+				18904A3A29C067AD00123C9E /* PlayerButton.swift in Sources */,
+				18904A5B29C06BE600123C9E /* Colors.swift in Sources */,
+				18904A4029C0688300123C9E /* IPodGestureRecognizer.swift in Sources */,
+				18904A6829C06CF400123C9E /* ProgressBar.swift in Sources */,
+				18904A6429C06C8E00123C9E /* UILabel+MyStyle.swift in Sources */,
+				18904A3329C066E100123C9E /* ContainerView.swift in Sources */,
+				18904A9929C070D100123C9E /* PlayerViewController.swift in Sources */,
+				18904A4929C06A3400123C9E /* Images.swift in Sources */,
+				18904A4C29C06AD400123C9E /* Fonts.swift in Sources */,
 				18904A0229C0642900123C9E /* ContainerViewController.swift in Sources */,
+				18904A8029C06ED600123C9E /* Sounds.swift in Sources */,
+				18904A4329C0692C00123C9E /* CGFloat+.swift in Sources */,
+				18904A7829C06E5700123C9E /* SelectTrackViewController.swift in Sources */,
+				18904A4629C069CC00123C9E /* ProtocolsForProject.swift in Sources */,
+				18904A9229C0702F00123C9E /* PlayerIPod.swift in Sources */,
 				189049FE29C0642900123C9E /* AppDelegate.swift in Sources */,
+				18904A5329C06B7900123C9E /* SelectButton.swift in Sources */,
+				18904A5729C06BBD00123C9E /* UIButton+Target.swift in Sources */,
+				18904A7C29C06EA500123C9E /* SelectTrackView.swift in Sources */,
+				18904A8A29C06FF400123C9E /* PlayerAppSounds.swift in Sources */,
 				18904A0029C0642900123C9E /* SceneDelegate.swift in Sources */,
+				18904A6D29C06D6800123C9E /* ModelProgressTrack.swift in Sources */,
+				18904A7129C06DB600123C9E /* ModelTrack.swift in Sources */,
+				18904A3D29C0681F00123C9E /* EnumsForProject.swift in Sources */,
+				18904A9E29C0711600123C9E /* SelectTrackCell.swift in Sources */,
+				18904A3529C0672600123C9E /* ControlModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +615,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				18904A1529C0643100123C9E /* iPod_U2_AudioPlayerTests.swift in Sources */,
+				18904A7229C06DB600123C9E /* ModelTrack.swift in Sources */,
+				18904A5C29C06BE600123C9E /* Colors.swift in Sources */,
+				18904A8129C06ED600123C9E /* Sounds.swift in Sources */,
+				18904A5829C06BBD00123C9E /* UIButton+Target.swift in Sources */,
+				18904A9F29C0711600123C9E /* SelectTrackCell.swift in Sources */,
+				18904A7929C06E5700123C9E /* SelectTrackViewController.swift in Sources */,
+				18904A7D29C06EA500123C9E /* SelectTrackView.swift in Sources */,
+				18904A6029C06C2D00123C9E /* NavBarView.swift in Sources */,
+				18904A9329C0702F00123C9E /* PlayerIPod.swift in Sources */,
+				18904A6529C06C8E00123C9E /* UILabel+MyStyle.swift in Sources */,
+				18904A8B29C06FF400123C9E /* PlayerAppSounds.swift in Sources */,
+				18904A5429C06B7900123C9E /* SelectButton.swift in Sources */,
+				18904A6E29C06D6800123C9E /* ModelProgressTrack.swift in Sources */,
+				18904A6929C06CF400123C9E /* ProgressBar.swift in Sources */,
+				18904A9A29C070D100123C9E /* PlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,7 +637,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18904A6F29C06D6800123C9E /* ModelProgressTrack.swift in Sources */,
+				18904A9B29C070D100123C9E /* PlayerViewController.swift in Sources */,
+				18904A5929C06BBD00123C9E /* UIButton+Target.swift in Sources */,
+				18904AA029C0711600123C9E /* SelectTrackCell.swift in Sources */,
+				18904A5D29C06BE600123C9E /* Colors.swift in Sources */,
+				18904A5529C06B7900123C9E /* SelectButton.swift in Sources */,
+				18904A9429C0702F00123C9E /* PlayerIPod.swift in Sources */,
+				18904A8229C06ED600123C9E /* Sounds.swift in Sources */,
+				18904A7E29C06EA500123C9E /* SelectTrackView.swift in Sources */,
 				18904A1F29C0643100123C9E /* iPod_U2_AudioPlayerUITests.swift in Sources */,
+				18904A6629C06C8E00123C9E /* UILabel+MyStyle.swift in Sources */,
+				18904A8C29C06FF400123C9E /* PlayerAppSounds.swift in Sources */,
+				18904A7A29C06E5700123C9E /* SelectTrackViewController.swift in Sources */,
+				18904A6129C06C2D00123C9E /* NavBarView.swift in Sources */,
+				18904A7329C06DB600123C9E /* ModelTrack.swift in Sources */,
+				18904A6A29C06CF400123C9E /* ProgressBar.swift in Sources */,
 				18904A2129C0643100123C9E /* iPod_U2_AudioPlayerUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
