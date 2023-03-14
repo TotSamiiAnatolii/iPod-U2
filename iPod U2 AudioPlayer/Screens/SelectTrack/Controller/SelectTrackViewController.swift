@@ -16,8 +16,6 @@ final class SelectTrackViewController: UIViewController {
         return view
     }
     
-    fileprivate let seekDuration: Float64 = 10
-    
     private var lastIndex: IndexPath = [0, 0]
 
     private var tracks: [ModelTrack] = [
