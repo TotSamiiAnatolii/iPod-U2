@@ -11,34 +11,16 @@ final class SelectTrackCell: UITableViewCell {
     
     static let identifire = "SelectTrackCell"
     
-    override var isSelected: Bool {
-        didSet {
-            if isSelected {
-                contentView.backgroundColor = Colors.displayColor
-                labelName.textColor = .white
-            } else {
-                contentView.backgroundColor = Colors.newDisplayColor
-                labelName.textColor = .black
-            }
-        }
-    }
-
-    private let labelName: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = Fonts.numbers
-        return label
-    }()
-
+    private let gradientLayer = CAGradientLayer()
+    
+    private let labelTrackName = UILabel()
+        .setMyStyle(font: Fonts.general)
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        if selected {
-            contentView.backgroundColor = Colors.displayColor
-            labelName.textColor = .white
-        } else {
-            contentView.backgroundColor = Colors.newDisplayColor
-            labelName.textColor = .black
-        }
+        
+        self.gradientLayer.isHidden = isSelected ? false : true
+        labelTrackName.textColor = isSelected ? .white : .black
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -52,19 +34,31 @@ final class SelectTrackCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func layoutSublayers(of layer: CALayer) {
+        super.layoutSublayers(of: self.layer)
+        gradientLayer.frame = self.bounds
+        
+        let colorSet = [Colors.progressMiddle, Colors.progressBottom]
+        let location = [0.2, 1.0]
+        
+        self.contentView.addGradient(with: gradientLayer, colorSet: colorSet, locations: location)
+    }
+    
     private func setViewHierarhies() {
-        contentView.addSubview(labelName)
+        contentView.addSubview(labelTrackName)
     }
     
     private func setConstraints() {
         NSLayoutConstraint.activate([
-            labelName.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            labelName.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 10)
+            labelTrackName.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            labelTrackName.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 10)
         ])
     }
-    
-    public func configureCell(text: ModelTrack) {
-        labelName.text = text.nameTrack
+}
+extension SelectTrackCell: ConfigurableView {
+    func configure(with model: ModelSelectTrackCell) {
+        self.labelTrackName.text = model.trackName
     }
-
+    
+    typealias Model = ModelSelectTrackCell
 }

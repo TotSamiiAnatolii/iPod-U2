@@ -8,6 +8,7 @@
 import UIKit
 
 extension CGFloat {
+    
     var degrees:CGFloat {
         return self * 180 / CGFloat(π)
     }
@@ -20,4 +21,11 @@ extension CGFloat {
     var deg2rad:CGFloat {
         return self.radians
     }
+    
+    func stringFromTimeInterval() -> String {
+           let interval = Int(self)
+           let seconds = interval % 60
+           let minutes = (interval / 60) % 60
+           return String(format: "%1d:%02d",  minutes, seconds)
+       }
 }

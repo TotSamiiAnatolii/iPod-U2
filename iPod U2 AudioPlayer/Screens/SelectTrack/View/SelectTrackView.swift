@@ -13,7 +13,7 @@ final class SelectTrackView: UIView {
     
     private let innerShadow = CALayer()
   
-    private let stateView = NavBarView(header: "Songs")
+    private let navBarView = NavBarView(header: "Songs")
         
     private let borderWidth: CGFloat = 0.7
     
@@ -47,7 +47,7 @@ final class SelectTrackView: UIView {
     }
     
     private func setViewHierarhies() {
-        self.addSubview(stateView)
+        self.addSubview(navBarView)
         self.addSubview(tableView)
         self.layer.addSublayer(innerShadow)
     }
@@ -55,16 +55,16 @@ final class SelectTrackView: UIView {
     private func setupConstraints() {
 
         NSLayoutConstraint.activate([
-            stateView.widthAnchor.constraint(equalTo: self.widthAnchor),
-            stateView.heightAnchor.constraint(equalToConstant: 35),
-            stateView.topAnchor.constraint(equalTo: self.topAnchor)
+            navBarView.widthAnchor.constraint(equalTo: self.widthAnchor),
+            navBarView.heightAnchor.constraint(equalToConstant: 35),
+            navBarView.topAnchor.constraint(equalTo: self.topAnchor)
         ])
 
         NSLayoutConstraint.activate([
             tableView.leftAnchor.constraint(equalTo: self.leftAnchor),
             tableView.rightAnchor.constraint(equalTo: self.rightAnchor),
             tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            tableView.topAnchor.constraint(equalTo: stateView.bottomAnchor)
+            tableView.topAnchor.constraint(equalTo: navBarView.bottomAnchor)
         ])
     }
     

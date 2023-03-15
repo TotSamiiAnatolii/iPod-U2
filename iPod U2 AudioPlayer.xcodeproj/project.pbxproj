@@ -78,6 +78,12 @@
 		18904A9E29C0711600123C9E /* SelectTrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A9D29C0711600123C9E /* SelectTrackCell.swift */; };
 		18904A9F29C0711600123C9E /* SelectTrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A9D29C0711600123C9E /* SelectTrackCell.swift */; };
 		18904AA029C0711600123C9E /* SelectTrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A9D29C0711600123C9E /* SelectTrackCell.swift */; };
+		18E20CCD29C0B5E400E9E16C /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E20CCC29C0B5E400E9E16C /* UIView+Gradient.swift */; };
+		18E20CCF29C0BBBC00E9E16C /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E20CCE29C0BBBC00E9E16C /* PlayerView.swift */; };
+		18E20CD229C0BC0A00E9E16C /* UIIMageView+MyStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E20CD129C0BC0A00E9E16C /* UIIMageView+MyStyle.swift */; };
+		18E20CD529C0BD2600E9E16C /* UIStackView+MyStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E20CD429C0BD2600E9E16C /* UIStackView+MyStyle.swift */; };
+		18E20CD829C0BD6B00E9E16C /* ModelTrackDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E20CD729C0BD6B00E9E16C /* ModelTrackDisplay.swift */; };
+		18E20CDB29C0DB5200E9E16C /* ModelSelectTrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E20CDA29C0DB5200E9E16C /* ModelSelectTrackCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +143,12 @@
 		18904A9129C0702F00123C9E /* PlayerIPod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerIPod.swift; sourceTree = "<group>"; };
 		18904A9829C070D100123C9E /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		18904A9D29C0711600123C9E /* SelectTrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTrackCell.swift; sourceTree = "<group>"; };
+		18E20CCC29C0B5E400E9E16C /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
+		18E20CCE29C0BBBC00E9E16C /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		18E20CD129C0BC0A00E9E16C /* UIIMageView+MyStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIIMageView+MyStyle.swift"; sourceTree = "<group>"; };
+		18E20CD429C0BD2600E9E16C /* UIStackView+MyStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+MyStyle.swift"; sourceTree = "<group>"; };
+		18E20CD729C0BD6B00E9E16C /* ModelTrackDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTrackDisplay.swift; sourceTree = "<group>"; };
+		18E20CDA29C0DB5200E9E16C /* ModelSelectTrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSelectTrackCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,6 +291,9 @@
 		18904A3729C0678000123C9E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				18E20CD329C0BC8700E9E16C /* UIStackView */,
+				18E20CD029C0BBE500E9E16C /* UIImageView */,
+				18E20CCB29C0B5C800E9E16C /* UIView */,
 				18904A6229C06C7C00123C9E /* UILabel */,
 				18904A4129C0691900123C9E /* CGFloat */,
 				18904A3E29C0684D00123C9E /* GestureRecognizer */,
@@ -368,6 +383,7 @@
 		18904A7429C06E1100123C9E /* SelectTrack */ = {
 			isa = PBXGroup;
 			children = (
+				18E20CD929C0DB3300E9E16C /* Model */,
 				18904A7529C06E2100123C9E /* Controller */,
 				18904A7629C06E2800123C9E /* View */,
 			);
@@ -414,6 +430,7 @@
 			children = (
 				18904A9629C070A700123C9E /* Controller */,
 				18904A9729C070AD00123C9E /* View */,
+				18E20CD629C0BD5500E9E16C /* Model */,
 			);
 			path = PlayerTrack;
 			sourceTree = "<group>";
@@ -429,6 +446,7 @@
 		18904A9729C070AD00123C9E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				18E20CCE29C0BBBC00E9E16C /* PlayerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -439,6 +457,46 @@
 				18904A9D29C0711600123C9E /* SelectTrackCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		18E20CCB29C0B5C800E9E16C /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				18E20CCC29C0B5E400E9E16C /* UIView+Gradient.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		18E20CD029C0BBE500E9E16C /* UIImageView */ = {
+			isa = PBXGroup;
+			children = (
+				18E20CD129C0BC0A00E9E16C /* UIIMageView+MyStyle.swift */,
+			);
+			path = UIImageView;
+			sourceTree = "<group>";
+		};
+		18E20CD329C0BC8700E9E16C /* UIStackView */ = {
+			isa = PBXGroup;
+			children = (
+				18E20CD429C0BD2600E9E16C /* UIStackView+MyStyle.swift */,
+			);
+			path = UIStackView;
+			sourceTree = "<group>";
+		};
+		18E20CD629C0BD5500E9E16C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18E20CD729C0BD6B00E9E16C /* ModelTrackDisplay.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18E20CD929C0DB3300E9E16C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18E20CDA29C0DB5200E9E16C /* ModelSelectTrackCell.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -586,14 +644,19 @@
 				18904A4029C0688300123C9E /* IPodGestureRecognizer.swift in Sources */,
 				18904A6829C06CF400123C9E /* ProgressBar.swift in Sources */,
 				18904A6429C06C8E00123C9E /* UILabel+MyStyle.swift in Sources */,
+				18E20CD229C0BC0A00E9E16C /* UIIMageView+MyStyle.swift in Sources */,
 				18904A3329C066E100123C9E /* ContainerView.swift in Sources */,
 				18904A9929C070D100123C9E /* PlayerViewController.swift in Sources */,
 				18904A4929C06A3400123C9E /* Images.swift in Sources */,
+				18E20CCF29C0BBBC00E9E16C /* PlayerView.swift in Sources */,
 				18904A4C29C06AD400123C9E /* Fonts.swift in Sources */,
 				18904A0229C0642900123C9E /* ContainerViewController.swift in Sources */,
+				18E20CDB29C0DB5200E9E16C /* ModelSelectTrackCell.swift in Sources */,
 				18904A8029C06ED600123C9E /* Sounds.swift in Sources */,
+				18E20CD829C0BD6B00E9E16C /* ModelTrackDisplay.swift in Sources */,
 				18904A4329C0692C00123C9E /* CGFloat+.swift in Sources */,
 				18904A7829C06E5700123C9E /* SelectTrackViewController.swift in Sources */,
+				18E20CCD29C0B5E400E9E16C /* UIView+Gradient.swift in Sources */,
 				18904A4629C069CC00123C9E /* ProtocolsForProject.swift in Sources */,
 				18904A9229C0702F00123C9E /* PlayerIPod.swift in Sources */,
 				189049FE29C0642900123C9E /* AppDelegate.swift in Sources */,
@@ -604,6 +667,7 @@
 				18904A0029C0642900123C9E /* SceneDelegate.swift in Sources */,
 				18904A6D29C06D6800123C9E /* ModelProgressTrack.swift in Sources */,
 				18904A7129C06DB600123C9E /* ModelTrack.swift in Sources */,
+				18E20CD529C0BD2600E9E16C /* UIStackView+MyStyle.swift in Sources */,
 				18904A3D29C0681F00123C9E /* EnumsForProject.swift in Sources */,
 				18904A9E29C0711600123C9E /* SelectTrackCell.swift in Sources */,
 				18904A3529C0672600123C9E /* ControlModule.swift in Sources */,

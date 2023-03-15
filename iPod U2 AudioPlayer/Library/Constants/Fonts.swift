@@ -11,5 +11,11 @@ enum Fonts {
     
     static let menu = UIFont(name: "MarkPro-Bold", size: 17)!
     
-    static let numbers = UIFont(name: "MarkPro-Bold", size: 17)!
+    static let heder = UIFont(name: "MarkPro-Bold", size: 17)!
+    
+    static let countTrack = UIFont(name: "MarkPro-Bold", size: 19)!
+    
+    static let nameTrack = UIFont(name: "MarkPro-Bold", size: 19)!
+    
+    static let general = UIFont(name: "MarkPro-Bold", size: 17)!
 }

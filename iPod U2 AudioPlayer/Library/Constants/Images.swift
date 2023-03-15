@@ -13,9 +13,9 @@ enum Images {
     
     static let play: UIImage = UIImage(named: "play-buttton")!.withTintColor(.black)
     
-    static let kartinca: UIImage = UIImage(named: "kish")!
-    
     static let battery: UIImage = UIImage(named: "battery")!.withTintColor(.black)
+    
+    static let liammiknow: UIImage = UIImage(named: "liam_m-i-know")!
     
     static let playPause = UIImage(named: ButtonPlayer.playPause.rawValue)!.withTintColor(.white)
     

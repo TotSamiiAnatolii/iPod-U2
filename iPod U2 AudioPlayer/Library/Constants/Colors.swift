@@ -8,10 +8,8 @@
 import UIKit
 
 enum Colors {
-    
-    static let displayColor: UIColor = #colorLiteral(red: 0.1035038212, green: 0.3966653317, blue: 0.9954437594, alpha: 1)
-    
-    static let newDisplayColor: UIColor = #colorLiteral(red: 0.9477133579, green: 0.9920332414, blue: 1, alpha: 1)
+
+    static let newDisplayColor: UIColor = #colorLiteral(red: 0.9942041201, green: 1, blue: 0.986237429, alpha: 1)
     
     static let shadowDisplayColor: CGColor = #colorLiteral(red: 0.3312136776, green: 0.3538864809, blue: 0.3218994991, alpha: 1).cgColor
 
@@ -34,8 +32,8 @@ enum Colors {
     
     static let progressWhite: CGColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1).cgColor
     
-    static let progressMiddle: CGColor = #colorLiteral(red: 0.1624934885, green: 0.465655829, blue: 0.7104727751, alpha: 1).withAlphaComponent(0.8).cgColor
+    static let progressMiddle: CGColor = #colorLiteral(red: 0.4748130957, green: 0.6746731763, blue: 0.9027803635, alpha: 1).withAlphaComponent(0.8).cgColor
     
-    static let progressBottom: CGColor = #colorLiteral(red: 0.1624934885, green: 0.465655829, blue: 0.7104727751, alpha: 1).withAlphaComponent(0.8).cgColor
+    static let progressBottom: CGColor = #colorLiteral(red: 0.1896464388, green: 0.5434677445, blue: 0.8291940368, alpha: 1).withAlphaComponent(0.8).cgColor
     
 }

@@ -8,6 +8,8 @@
 import UIKit
 
 struct ModelTrack {
+    
+    let id: UUID
 
     let nameTrack: String
     

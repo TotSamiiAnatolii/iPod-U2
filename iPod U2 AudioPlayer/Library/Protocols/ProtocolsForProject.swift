@@ -20,9 +20,9 @@ protocol ConfigurableView {
 
 protocol PlayerIPodDelegate: AnyObject {
     
-    func goToBackTrack(name: String) -> ModelTrack?
+    func goToBackTrack(id: UUID) -> ModelTrack?
     
-    func forwardTrack(name: String) -> ModelTrack?
+    func forwardTrack(id: UUID) -> ModelTrack?
     
-    func fetchContTrack(name: String) -> (Int, Int)
+    func fetchContTrack(id: UUID) -> (Int, Int)
 }

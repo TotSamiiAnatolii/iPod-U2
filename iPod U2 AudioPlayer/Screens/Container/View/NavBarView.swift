@@ -11,9 +11,9 @@ import UIKit
 
 final class NavBarView: UIView {
     
-    private let topColor: CGColor = UIColor.white.cgColor
+    private let topColor: CGColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1).cgColor
     
-    private let bottomColor: CGColor = #colorLiteral(red: 0.7441808346, green: 0.7729214195, blue: 0.7957566603, alpha: 1).cgColor
+    private let bottomColor: CGColor = #colorLiteral(red: 0.8907980307, green: 0.8907980307, blue: 0.8907980307, alpha: 1).cgColor
     
     private let indent: CGFloat = 10
     
@@ -25,7 +25,7 @@ final class NavBarView: UIView {
     }()
     
     private let header = UILabel()
-        .setMyStyle(font: Fonts.numbers)
+        .setMyStyle(font: Fonts.heder)
     
     
     private let battary: UIImageView = {
