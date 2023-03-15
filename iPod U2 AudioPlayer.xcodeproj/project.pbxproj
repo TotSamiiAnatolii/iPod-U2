@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1883B33029C1B67A005E8D96 /* UIView+MyStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1883B32F29C1B67A005E8D96 /* UIView+MyStyle.swift */; };
 		189049FE29C0642900123C9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189049FD29C0642900123C9E /* AppDelegate.swift */; };
 		18904A0029C0642900123C9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189049FF29C0642900123C9E /* SceneDelegate.swift */; };
 		18904A0229C0642900123C9E /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A0129C0642900123C9E /* ContainerViewController.swift */; };
@@ -104,6 +105,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1883B32F29C1B67A005E8D96 /* UIView+MyStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+MyStyle.swift"; sourceTree = "<group>"; };
 		189049FA29C0642900123C9E /* iPod U2 AudioPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iPod U2 AudioPlayer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		189049FD29C0642900123C9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		189049FF29C0642900123C9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -463,6 +465,7 @@
 			isa = PBXGroup;
 			children = (
 				18E20CCC29C0B5E400E9E16C /* UIView+Gradient.swift */,
+				1883B32F29C1B67A005E8D96 /* UIView+MyStyle.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -652,6 +655,7 @@
 				18904A4C29C06AD400123C9E /* Fonts.swift in Sources */,
 				18904A0229C0642900123C9E /* ContainerViewController.swift in Sources */,
 				18E20CDB29C0DB5200E9E16C /* ModelSelectTrackCell.swift in Sources */,
+				1883B33029C1B67A005E8D96 /* UIView+MyStyle.swift in Sources */,
 				18904A8029C06ED600123C9E /* Sounds.swift in Sources */,
 				18E20CD829C0BD6B00E9E16C /* ModelTrackDisplay.swift in Sources */,
 				18904A4329C0692C00123C9E /* CGFloat+.swift in Sources */,

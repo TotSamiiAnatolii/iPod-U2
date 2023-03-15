@@ -7,26 +7,21 @@
 
 import UIKit
 
-import UIKit
-
 final class NavBarView: UIView {
     
     private let topColor: CGColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1).cgColor
     
     private let bottomColor: CGColor = #colorLiteral(red: 0.8907980307, green: 0.8907980307, blue: 0.8907980307, alpha: 1).cgColor
     
+    private let hieghtBorder: CGFloat = 1
+    
     private let indent: CGFloat = 10
     
-    private let borderView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = Colors.borderColor
-        return view
-    }()
+    private let borderView = UIView()
+        .setMyStyle(color: Colors.borderColor)
     
     private let header = UILabel()
         .setMyStyle(font: Fonts.heder)
-    
     
     private let battary: UIImageView = {
         let image = UIImageView()
@@ -34,7 +29,7 @@ final class NavBarView: UIView {
         image.image = Images.battery
         return image
     }()
-
+    
     init(header: String) {
         self.header.text = header
         super.init(frame: .zero)
@@ -55,11 +50,11 @@ final class NavBarView: UIView {
         self.translatesAutoresizingMaskIntoConstraints = false
         guard let gradientView = self.layer as? CAGradientLayer else {
             return;
-         }
-         gradientView.colors = [topColor, bottomColor]
-         gradientView.locations = [0.0, 1.0]
-         gradientView.frame = self.bounds
-     }
+        }
+        gradientView.colors = [topColor, bottomColor]
+        gradientView.locations = [0.0, 1.0]
+        gradientView.frame = self.bounds
+    }
     
     private func setViewHierarhies() {
         self.addSubview(borderView)
@@ -70,7 +65,7 @@ final class NavBarView: UIView {
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             borderView.widthAnchor.constraint(equalTo: self.widthAnchor),
-            borderView.heightAnchor.constraint(equalToConstant: 1),
+            borderView.heightAnchor.constraint(equalToConstant: hieghtBorder),
             borderView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
         
@@ -78,7 +73,7 @@ final class NavBarView: UIView {
             header.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             header.topAnchor.constraint(equalTo: self.topAnchor, constant: indent)
         ])
-     
+        
         NSLayoutConstraint.activate([
             battary.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.8),
             battary.widthAnchor.constraint(equalTo: battary.heightAnchor),

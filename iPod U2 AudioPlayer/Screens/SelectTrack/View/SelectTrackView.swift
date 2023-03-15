@@ -8,14 +8,14 @@
 import UIKit
 
 final class SelectTrackView: UIView {
-    
-    private let radius: CGFloat = 0
-    
+   
     private let innerShadow = CALayer()
   
     private let navBarView = NavBarView(header: "Songs")
         
     private let borderWidth: CGFloat = 0.7
+    
+    private let heightNavBarView: CGFloat = 35
     
     private let borderColor = Colors.borderDisplayColor
     
@@ -24,8 +24,6 @@ final class SelectTrackView: UIView {
     private func setupView() {
         self.backgroundColor = Colors.newDisplayColor
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.clipsToBounds = true
-        self.layer.cornerRadius = radius
         self.layer.borderWidth = borderWidth
         self.layer.borderColor = borderColor
     }
@@ -56,7 +54,7 @@ final class SelectTrackView: UIView {
 
         NSLayoutConstraint.activate([
             navBarView.widthAnchor.constraint(equalTo: self.widthAnchor),
-            navBarView.heightAnchor.constraint(equalToConstant: 35),
+            navBarView.heightAnchor.constraint(equalToConstant: heightNavBarView),
             navBarView.topAnchor.constraint(equalTo: self.topAnchor)
         ])
 
@@ -72,6 +70,7 @@ final class SelectTrackView: UIView {
         tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorStyle = .none
+        tableView.isUserInteractionEnabled = false
         tableView.backgroundColor = Colors.newDisplayColor
         tableView.register(SelectTrackCell.self, forCellReuseIdentifier: SelectTrackCell.identifire)
     }
@@ -83,12 +82,11 @@ final class SelectTrackView: UIView {
         let path = UIBezierPath(roundedRect: innerShadow.bounds.insetBy(dx: 2, dy: 2), cornerRadius: radius)
         
         let cutout = UIBezierPath(roundedRect: innerShadow.bounds, cornerRadius: radius).reversing()
-        
         path.append(cutout)
+        
+        
         innerShadow.shadowPath = path.cgPath
-        
         innerShadow.masksToBounds = true
-        
         innerShadow.shadowColor = Colors.shadowDisplayColor
         innerShadow.shadowOffset = CGSize(width: 0, height: 3)
         innerShadow.shadowOpacity = 5

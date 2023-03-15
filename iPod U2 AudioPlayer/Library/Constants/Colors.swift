@@ -12,6 +12,8 @@ enum Colors {
     static let newDisplayColor: UIColor = #colorLiteral(red: 0.9942041201, green: 1, blue: 0.986237429, alpha: 1)
     
     static let shadowDisplayColor: CGColor = #colorLiteral(red: 0.3312136776, green: 0.3538864809, blue: 0.3218994991, alpha: 1).cgColor
+    
+    static let controlModule: UIColor = #colorLiteral(red: 0.7803921569, green: 0.1093301586, blue: 0.1270790009, alpha: 1)
 
     static let shadowKeyBoardButtonColor: UIColor = #colorLiteral(red: 0.2768285479, green: 0.2830350164, blue: 0.2745786159, alpha: 1)
 

@@ -15,19 +15,11 @@ final class ControlModule: UIView {
     
     private let indent: CGFloat = 10
     
-    private let mainView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .red
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
+    private let mainView = UIView()
+        .setMyStyle(color: Colors.controlModule)
     
-    private let selectionRing: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .red
-        return view
-    }()
+    private let selectionRing = UIView()
+        .setMyStyle(color: Colors.controlModule)
     
     private lazy var selectButton = SelectButton(type: .select)
         .setTarget(method: #selector(buttonAction), target: self, event: .touchUpInside)
@@ -69,12 +61,11 @@ final class ControlModule: UIView {
         super.layoutSubviews()
         mainView.layer.cornerRadius = mainView.frame.height / 2
         selectionRing.layer.cornerRadius = self.selectionRing.frame.height / 2
-        
-        let innerRadius = selectButton.frame.height / 2
-        
-        let outerRadius = selectionRing.frame.height
-
-        mainView.addGestureRecognizer(IPodGestureRecognizer(midPoint: mainView.center, innerRadius: innerRadius, outerRadius: outerRadius, target: self, action: #selector(rotateGesture(recognizer:))))
+    }
+    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        addGesture(view: mainView, target: self)
     }
     
     private func setViewHierarhies() {
@@ -136,25 +127,34 @@ final class ControlModule: UIView {
         ])
     }
     
+    private func addGesture(view: UIView, target: UIView) {
+        let innerRadius = selectButton.frame.height / 2
+        
+        let outerRadius = selectionRing.frame.height
+        
+        view.addGestureRecognizer(IPodGestureRecognizer(midPoint: mainView.center, innerRadius: innerRadius, outerRadius: outerRadius, target: target, action: #selector(rotateGesture(recognizer:))))
+    }
+    
     @objc func buttonAction(sender: PlayerButton) {
         guard let type = sender.typeButton else { return }
         delegate?.onAction(sender: type)
     }
     
     @objc func rotateGesture(recognizer: IPodGestureRecognizer) {
-
+        let maxValue: CGFloat = 10
+        let minValue: CGFloat = -1
+        
         if let rotation = recognizer.rotation {
-
-        corner += (rotation.degrees / 360) * 100
-            if corner > 10 {
+            
+            corner += (rotation.degrees / 360) * 100
+            if corner > maxValue {
                 delegate?.onAction(sender: .forward)
                 corner = 0
             }
-            if corner < -1 {
+            if corner < minValue {
                 delegate?.onAction(sender: .back)
-                corner = 10
+                corner = maxValue
             }
         }
     }
-  
 }

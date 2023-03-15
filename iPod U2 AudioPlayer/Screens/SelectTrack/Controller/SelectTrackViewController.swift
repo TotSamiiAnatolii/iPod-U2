@@ -52,12 +52,11 @@ final class SelectTrackViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.view.translatesAutoresizingMaskIntoConstraints = true
         self.navigationController?.navigationBar.isHidden = true
         
         twoView.tableView.delegate = self
         twoView.tableView.dataSource = self
-        self.view.translatesAutoresizingMaskIntoConstraints = true
         arrayCell = map(model: tracks)
         setStartTrack()
     }

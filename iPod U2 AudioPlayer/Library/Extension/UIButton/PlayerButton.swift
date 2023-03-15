@@ -46,7 +46,7 @@ final class PlayerButton: UIButton {
     private func setConfiguration(model: ModelPlayerButtun) {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.setImage(model.image, for: .normal)
-        self.backgroundColor = .red
+        self.backgroundColor = Colors.controlModule
         self.setTitle(model.title, for: .normal)
         self.contentMode = .scaleAspectFill
         self.titleLabel?.font = model.font

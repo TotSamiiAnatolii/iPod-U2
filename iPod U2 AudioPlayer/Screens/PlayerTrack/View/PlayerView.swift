@@ -9,8 +9,6 @@ import UIKit
 
 final class PlayerView: UIView {
     
-    private let radius: CGFloat = 10
-    
     private let innerShadow = CALayer()
     
     private let borderWidth: CGFloat = 0.7
@@ -20,14 +18,14 @@ final class PlayerView: UIView {
     private let stateView = NavBarView(header: "Now playing")
     
     private let progressBar = ProgressBar(frame: .zero)
-
+    
     private let imageCurrentState = UIImageView()
         .setMyStyle()
         .setImage(image: Images.play)
     
     private let labelCount = UILabel()
         .setMyStyle(font: Fonts.countTrack)
-
+    
     private let labelNameTrack = UILabel()
         .setMyStyle(font: Fonts.nameTrack)
     
@@ -37,10 +35,10 @@ final class PlayerView: UIView {
     private let labelNameAlbum = UILabel()
         .setMyStyle(font: Fonts.general)
     
-    public let labelCurrentTime = UILabel()
+    private let labelCurrentTime = UILabel()
         .setMyStyle(font: Fonts.general)
     
-    public let labelDurationTime = UILabel()
+    private let labelDurationTime = UILabel()
         .setMyStyle(font: Fonts.general)
     
     private let imageTrack = UIImageView()
@@ -57,8 +55,6 @@ final class PlayerView: UIView {
     private func setupView() {
         self.backgroundColor = Colors.newDisplayColor
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.clipsToBounds = true
-        self.layer.cornerRadius = 0
         self.layer.borderWidth = borderWidth
         self.layer.borderColor = borderColor
     }
@@ -95,7 +91,7 @@ final class PlayerView: UIView {
             stateView.heightAnchor.constraint(equalToConstant: 35),
             stateView.topAnchor.constraint(equalTo: self.topAnchor)
         ])
-
+        
         NSLayoutConstraint.activate([
             imageCurrentState.heightAnchor.constraint(equalTo: stateView.heightAnchor, multiplier: 0.5),
             imageCurrentState.widthAnchor.constraint(equalTo: imageCurrentState.heightAnchor),
@@ -152,17 +148,14 @@ final class PlayerView: UIView {
     
     private func setInnerShadow() {
         innerShadow.frame = self.bounds
+        
         let radius = self.layer.cornerRadius
-        
         let path = UIBezierPath(roundedRect: innerShadow.bounds.insetBy(dx: 2, dy: 2), cornerRadius: radius)
-        
         let cutout = UIBezierPath(roundedRect: innerShadow.bounds, cornerRadius: radius).reversing()
-        
         path.append(cutout)
+        
         innerShadow.shadowPath = path.cgPath
-        
         innerShadow.masksToBounds = true
-        
         innerShadow.shadowColor = Colors.shadowDisplayColor
         innerShadow.shadowOffset = CGSize(width: 0, height: 3)
         innerShadow.shadowOpacity = 5
