@@ -7,8 +7,7 @@
 
 import UIKit
 
-let π = Float(M_PI)
-
+let π = CGFloat.pi
 
 final class IPodGestureRecognizer: UIGestureRecognizer {
     
