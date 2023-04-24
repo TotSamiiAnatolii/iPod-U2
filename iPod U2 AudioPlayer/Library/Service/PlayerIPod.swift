@@ -75,29 +75,35 @@ final class PlayerIPod {
     }
     
     func buttonGoToBackSec() {
-        
         let playerCurrenTime = CMTimeGetSeconds(audioPlayer.currentTime())
         var newTime = playerCurrenTime - seekDuration
         if newTime < 0 { newTime = 0 }
         audioPlayer.pause()
         let selectedTime: CMTime = CMTimeMake(value: Int64(newTime * 1000 as Float64), timescale: 1000)
         audioPlayer.seek(to: selectedTime)
-        audioPlayer.play()
+        
+        switch statePlayer {
+        case .pause:
+            audioPlayer.pause()
+        case .play:
+            audioPlayer.play()
+        }
     }
-    
-    
     
     func buttonForwardSec() {
         if let duration  = audioPlayer.currentItem?.duration {
             let playerCurrentTime = CMTimeGetSeconds(audioPlayer.currentTime())
             let newTime = playerCurrentTime + seekDuration
-            if newTime < CMTimeGetSeconds(duration)
-            {
+            if newTime < CMTimeGetSeconds(duration) {
                 let selectedTime: CMTime = CMTimeMake(value: Int64(newTime * 1000 as Float64), timescale: 1000)
                 audioPlayer.seek(to: selectedTime)
             }
-            audioPlayer.pause()
-            audioPlayer.play()
+            switch statePlayer {
+            case .pause:
+                audioPlayer.pause()
+            case .play:
+                audioPlayer.play()
+            }
         }
     }
     

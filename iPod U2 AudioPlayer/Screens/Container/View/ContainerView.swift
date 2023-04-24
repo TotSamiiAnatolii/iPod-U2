@@ -15,21 +15,21 @@ final class ContainerView: UIView {
         return view
     }()
     
-    public var onAction: ((ButtonPlayer) -> Void)?
+    var onAction: ((ButtonPlayer) -> Void)?
     
-    public let controlModule = ControlModule(frame: .zero)
-
+    let controlModule = ControlModule(frame: .zero)
+    
     override init(frame: CGRect) {
         super.init(frame: .zero)
         self.backgroundColor = .black
         setViewHierarhies()
         setConstraints()
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     private func setViewHierarhies() {
         self.addSubview(display)
         self.addSubview(controlModule)
@@ -45,13 +45,10 @@ final class ContainerView: UIView {
         ])
         
         NSLayoutConstraint.activate([
-           
             controlModule.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.75),
             controlModule.heightAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.75),
             controlModule.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             controlModule.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -100)
         ])
     }
-
-
 }

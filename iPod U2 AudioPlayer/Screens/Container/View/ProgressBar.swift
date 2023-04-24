@@ -106,7 +106,6 @@ final class ProgressBar: UIView {
         let endPoint = CGPoint(x: view.frame.midX * lengthFactor, y: view.frame.midY)
         
         shapeLayer.strokeColor = UIColor.black.withAlphaComponent(0.04).cgColor
-        
         shapeLayer.lineWidth = heightDottedLine
         shapeLayer.lineDashPattern = [7, 10]
         shapeLayer.fillRule = .evenOdd

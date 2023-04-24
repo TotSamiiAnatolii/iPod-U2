@@ -71,7 +71,6 @@ final class ControlModule: UIView {
     private func setViewHierarhies() {
         self.addSubview(selectionRing)
         self.addSubview(mainView)
-        
         self.addSubview(selectButton)
         self.addSubview(menuButton)
         self.addSubview(pausePlayButton)
