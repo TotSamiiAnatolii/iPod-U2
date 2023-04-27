@@ -70,7 +70,6 @@ final class SelectTrackViewController: UIViewController {
     }
     
     private func searchIndexNextTrack(id: UUID) -> Int {
-        
         return tracks.firstIndex {$0.id == id} ?? 0
     }
     
@@ -153,9 +152,10 @@ extension SelectTrackViewController: UITableViewDelegate, UITableViewDataSource 
             return UITableViewCell()
         }
         
-        if tracks[indexPath.row].isSelected {
+        switch tracks[indexPath.row].isSelected {
+        case true:
             cell.isSelected = true
-        } else {
+        case false:
             cell.isSelected = false
         }
         cell.configure(with: arrayCell[indexPath.row])

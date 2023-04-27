@@ -77,7 +77,6 @@ final class IPodGestureRecognizer: UIGestureRecognizer {
         return angleForPoint(point: pointA) - angleForPoint(point: pointB)
     }
     
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent) {
         super.touchesBegan(touches, with: event)
         if let firstTouch = touches.first {

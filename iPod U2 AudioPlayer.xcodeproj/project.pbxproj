@@ -44,8 +44,6 @@
 		18904A6529C06C8E00123C9E /* UILabel+MyStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A6329C06C8E00123C9E /* UILabel+MyStyle.swift */; };
 		18904A6629C06C8E00123C9E /* UILabel+MyStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A6329C06C8E00123C9E /* UILabel+MyStyle.swift */; };
 		18904A6829C06CF400123C9E /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A6729C06CF400123C9E /* ProgressBar.swift */; };
-		18904A6929C06CF400123C9E /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A6729C06CF400123C9E /* ProgressBar.swift */; };
-		18904A6A29C06CF400123C9E /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A6729C06CF400123C9E /* ProgressBar.swift */; };
 		18904A6D29C06D6800123C9E /* ModelProgressTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A6C29C06D6800123C9E /* ModelProgressTrack.swift */; };
 		18904A6E29C06D6800123C9E /* ModelProgressTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A6C29C06D6800123C9E /* ModelProgressTrack.swift */; };
 		18904A6F29C06D6800123C9E /* ModelProgressTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A6C29C06D6800123C9E /* ModelProgressTrack.swift */; };
@@ -250,9 +248,9 @@
 		18904A2F29C0645800123C9E /* Container */ = {
 			isa = PBXGroup;
 			children = (
-				18904A6B29C06D5100123C9E /* Model */,
 				18904A3029C0647E00123C9E /* Controller */,
 				18904A3129C0648600123C9E /* View */,
+				18904A6B29C06D5100123C9E /* Model */,
 			);
 			path = Container;
 			sourceTree = "<group>";
@@ -270,8 +268,6 @@
 			children = (
 				18904A3229C066E100123C9E /* ContainerView.swift */,
 				18904A3429C0672600123C9E /* ControlModule.swift */,
-				18904A5E29C06C2D00123C9E /* NavBarView.swift */,
-				18904A6729C06CF400123C9E /* ProgressBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -385,9 +381,9 @@
 		18904A7429C06E1100123C9E /* SelectTrack */ = {
 			isa = PBXGroup;
 			children = (
-				18E20CD929C0DB3300E9E16C /* Model */,
 				18904A7529C06E2100123C9E /* Controller */,
 				18904A7629C06E2800123C9E /* View */,
+				18E20CD929C0DB3300E9E16C /* Model */,
 			);
 			path = SelectTrack;
 			sourceTree = "<group>";
@@ -404,6 +400,7 @@
 			isa = PBXGroup;
 			children = (
 				18904A7B29C06EA500123C9E /* SelectTrackView.swift */,
+				18904A5E29C06C2D00123C9E /* NavBarView.swift */,
 				18904A9C29C070F500123C9E /* Cell */,
 			);
 			path = View;
@@ -449,6 +446,7 @@
 			isa = PBXGroup;
 			children = (
 				18E20CCE29C0BBBC00E9E16C /* PlayerView.swift */,
+				18904A6729C06CF400123C9E /* ProgressBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -696,7 +694,6 @@
 				18904A8B29C06FF400123C9E /* PlayerAppSounds.swift in Sources */,
 				18904A5429C06B7900123C9E /* SelectButton.swift in Sources */,
 				18904A6E29C06D6800123C9E /* ModelProgressTrack.swift in Sources */,
-				18904A6929C06CF400123C9E /* ProgressBar.swift in Sources */,
 				18904A9A29C070D100123C9E /* PlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -720,7 +717,6 @@
 				18904A7A29C06E5700123C9E /* SelectTrackViewController.swift in Sources */,
 				18904A6129C06C2D00123C9E /* NavBarView.swift in Sources */,
 				18904A7329C06DB600123C9E /* ModelTrack.swift in Sources */,
-				18904A6A29C06CF400123C9E /* ProgressBar.swift in Sources */,
 				18904A2129C0643100123C9E /* iPod_U2_AudioPlayerUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

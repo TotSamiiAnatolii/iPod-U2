@@ -84,7 +84,6 @@ final class SelectTrackView: UIView {
         let cutout = UIBezierPath(roundedRect: innerShadow.bounds, cornerRadius: radius).reversing()
         path.append(cutout)
         
-        
         innerShadow.shadowPath = path.cgPath
         innerShadow.masksToBounds = true
         innerShadow.shadowColor = Colors.shadowDisplayColor

@@ -25,9 +25,7 @@ final class ContainerViewController: UIViewController {
         super.viewDidLoad()
 
         self.navigationController?.navigationBar.isHidden = true
-     
         containerView.controlModule.delegate = self
-
         showChildViewController()
     }
     

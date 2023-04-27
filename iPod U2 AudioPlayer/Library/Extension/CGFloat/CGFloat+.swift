@@ -15,17 +15,17 @@ extension CGFloat {
     var radians:CGFloat {
         return self * CGFloat(π) / 180
     }
-    var rad2deg:CGFloat {
-        return self.degrees
-    }
-    var deg2rad:CGFloat {
-        return self.radians
-    }
+//    var rad2deg:CGFloat {
+//        return self.degrees
+//    }
+//    var deg2rad:CGFloat {
+//        return self.radians
+//    }
     
     func stringFromTimeInterval() -> String {
-           let interval = Int(self)
-           let seconds = interval % 60
-           let minutes = (interval / 60) % 60
-           return String(format: "%1d:%02d",  minutes, seconds)
-       }
+        let interval = Int(self)
+        let seconds = interval % 60
+        let minutes = (interval / 60) % 60
+        return String(format: "%1d:%02d",  minutes, seconds)
+    }
 }
