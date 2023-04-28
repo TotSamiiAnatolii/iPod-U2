@@ -11,6 +11,12 @@ final class PlayerView: UIView {
     
     private let innerShadow = CALayer()
     
+    private let heightProgressBar: CGFloat = 20
+    
+    private let heightStateView: CGFloat = 35
+    
+    private let indent: CGFloat = 15
+    
     private let borderWidth: CGFloat = 0.7
     
     private let borderColor = Colors.borderDisplayColor
@@ -88,7 +94,7 @@ final class PlayerView: UIView {
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             stateView.widthAnchor.constraint(equalTo: self.widthAnchor),
-            stateView.heightAnchor.constraint(equalToConstant: 35),
+            stateView.heightAnchor.constraint(equalToConstant: heightStateView),
             stateView.topAnchor.constraint(equalTo: self.topAnchor)
         ])
         
@@ -96,29 +102,29 @@ final class PlayerView: UIView {
             imageCurrentState.heightAnchor.constraint(equalTo: stateView.heightAnchor, multiplier: 0.5),
             imageCurrentState.widthAnchor.constraint(equalTo: imageCurrentState.heightAnchor),
             imageCurrentState.centerYAnchor.constraint(equalTo: stateView.centerYAnchor),
-            imageCurrentState.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 15)
+            imageCurrentState.leftAnchor.constraint(equalTo: self.leftAnchor, constant: indent)
         ])
         
         NSLayoutConstraint.activate([
-            labelCount.topAnchor.constraint(equalTo: stateView.bottomAnchor, constant: 15),
-            labelCount.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 15)
+            labelCount.topAnchor.constraint(equalTo: stateView.bottomAnchor, constant: indent),
+            labelCount.leftAnchor.constraint(equalTo: self.leftAnchor, constant: indent)
         ])
         
         NSLayoutConstraint.activate([
             imageTrack.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.35),
             imageTrack.heightAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.35),
-            imageTrack.topAnchor.constraint(equalTo: labelCount.bottomAnchor, constant: 15),
-            imageTrack.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 15)
+            imageTrack.topAnchor.constraint(equalTo: labelCount.bottomAnchor, constant: indent),
+            imageTrack.leftAnchor.constraint(equalTo: self.leftAnchor, constant: indent)
         ])
         
         NSLayoutConstraint.activate([
             mainStackView.centerYAnchor.constraint(equalTo: imageTrack.centerYAnchor),
-            mainStackView.leftAnchor.constraint(equalTo: imageTrack.rightAnchor, constant: 15),
+            mainStackView.leftAnchor.constraint(equalTo: imageTrack.rightAnchor, constant: indent),
             mainStackView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10)
         ])
         
         NSLayoutConstraint.activate([
-            progressBar.heightAnchor.constraint(equalToConstant: 20),
+            progressBar.heightAnchor.constraint(equalToConstant: heightProgressBar),
             progressBar.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.9),
             progressBar.topAnchor.constraint(equalTo: imageTrack.bottomAnchor, constant: 20),
             progressBar.centerXAnchor.constraint(equalTo: self.centerXAnchor)

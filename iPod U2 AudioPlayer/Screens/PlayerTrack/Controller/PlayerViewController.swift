@@ -105,7 +105,7 @@ final class PlayerViewController: UIViewController {
     
     private func configureView(model: ModelTrack) {
         let modelView = ModelPlayTrackDisplay(
-            countTrack: delegate?.fetchContTrack(id: model.id) ?? (0, 0),
+            countTrack: delegate?.fetchCountTrack(id: model.id) ?? (0, 0),
             nameTrack: model.nameTrack,
             namePerformer: model.namePerformer,
             nameAlbum: model.nameAlbum,

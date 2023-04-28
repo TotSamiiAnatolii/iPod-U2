@@ -24,5 +24,5 @@ protocol PlayerIPodDelegate: AnyObject {
     
     func forwardTrack(id: UUID) -> ModelTrack?
     
-    func fetchContTrack(id: UUID) -> (Int, Int)
+    func fetchCountTrack(id: UUID) -> (Int, Int)
 }

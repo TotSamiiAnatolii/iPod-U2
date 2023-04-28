@@ -13,6 +13,10 @@ final class SelectTrackCell: UITableViewCell {
     
     private let gradientLayer = CAGradientLayer()
     
+    private let colorSet = [Colors.progressMiddle, Colors.progressBottom]
+    
+    private let location = [0.2, 1.0]
+    
     private let labelTrackName = UILabel()
         .setMyStyle(font: Fonts.general)
     
@@ -37,9 +41,6 @@ final class SelectTrackCell: UITableViewCell {
     override func layoutSublayers(of layer: CALayer) {
         super.layoutSublayers(of: self.layer)
         gradientLayer.frame = self.bounds
-        
-        let colorSet = [Colors.progressMiddle, Colors.progressBottom]
-        let location = [0.2, 1.0]
         
         self.contentView.addGradient(with: gradientLayer, colorSet: colorSet, locations: location)
     }

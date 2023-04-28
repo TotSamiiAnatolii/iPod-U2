@@ -194,7 +194,7 @@ extension SelectTrackViewController: PlayerIPodDelegate {
         return nil
     }
     
-    func fetchContTrack(id: UUID) -> (Int, Int) {
+    func fetchCountTrack(id: UUID) -> (Int, Int) {
         let numberCurrentTrack = searchIndexNextTrack(id: id) + 1
         return (numberCurrentTrack, tracks.count)
     }
