@@ -17,7 +17,11 @@ final class PlayerView: UIView {
     
     private let indent: CGFloat = 15
     
+    private let horizontalIndent: CGFloat = 10
+    
     private let borderWidth: CGFloat = 0.7
+    
+    private let topIndentProgressBar: CGFloat = 20
     
     private let borderColor = Colors.borderDisplayColor
     
@@ -88,7 +92,6 @@ final class PlayerView: UIView {
         self.addSubview(progressBar)
         self.addSubview(labelCurrentTime)
         self.addSubview(labelDurationTime)
-        self.layer.addSublayer(innerShadow)
     }
     
     private func setupConstraints() {
@@ -120,29 +123,29 @@ final class PlayerView: UIView {
         NSLayoutConstraint.activate([
             mainStackView.centerYAnchor.constraint(equalTo: imageTrack.centerYAnchor),
             mainStackView.leftAnchor.constraint(equalTo: imageTrack.rightAnchor, constant: indent),
-            mainStackView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10)
+            mainStackView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -horizontalIndent)
         ])
         
         NSLayoutConstraint.activate([
             progressBar.heightAnchor.constraint(equalToConstant: heightProgressBar),
             progressBar.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.9),
-            progressBar.topAnchor.constraint(equalTo: imageTrack.bottomAnchor, constant: 20),
+            progressBar.topAnchor.constraint(equalTo: imageTrack.bottomAnchor, constant: topIndentProgressBar),
             progressBar.centerXAnchor.constraint(equalTo: self.centerXAnchor)
         ])
         
         NSLayoutConstraint.activate([
             labelCurrentTime.leftAnchor.constraint(equalTo: progressBar.leftAnchor),
-            labelCurrentTime.topAnchor.constraint(equalTo: progressBar.bottomAnchor, constant: 10)
+            labelCurrentTime.topAnchor.constraint(equalTo: progressBar.bottomAnchor, constant: horizontalIndent)
         ])
         
         NSLayoutConstraint.activate([
             labelDurationTime.rightAnchor.constraint(equalTo: progressBar.rightAnchor),
-            labelDurationTime.topAnchor.constraint(equalTo: progressBar.bottomAnchor, constant: 10)
+            labelDurationTime.topAnchor.constraint(equalTo: progressBar.bottomAnchor, constant: horizontalIndent)
         ])
     }
     
     override func draw(_ rect: CGRect) {
-        setInnerShadow()
+        self.addInnerShadow(layer: innerShadow)
     }
     
     override func layoutSubviews() {
@@ -151,24 +154,7 @@ final class PlayerView: UIView {
         self.progressBar.layer.cornerRadius = 2
         self.imageTrack.layer.cornerRadius = 2
     }
-    
-    private func setInnerShadow() {
-        innerShadow.frame = self.bounds
-        
-        let radius = self.layer.cornerRadius
-        let path = UIBezierPath(roundedRect: innerShadow.bounds.insetBy(dx: 2, dy: 2), cornerRadius: radius)
-        let cutout = UIBezierPath(roundedRect: innerShadow.bounds, cornerRadius: radius).reversing()
-        path.append(cutout)
-        
-        innerShadow.shadowPath = path.cgPath
-        innerShadow.masksToBounds = true
-        innerShadow.shadowColor = Colors.shadowDisplayColor
-        innerShadow.shadowOffset = CGSize(width: 0, height: 3)
-        innerShadow.shadowOpacity = 5
-        innerShadow.shadowRadius = 3
-        innerShadow.cornerRadius = radius
-    }
-    
+
     public func updateProgressView(model: ModelProgressTrack) {
         self.labelCurrentTime.text = model.currentTime.stringFromTimeInterval()
         self.labelDurationTime.text = "-\(model.currentDuration.stringFromTimeInterval())"

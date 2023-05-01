@@ -18,7 +18,6 @@ extension UIImageView {
     
     public func setImage(image: UIImage?) -> Self {
         self.image = image
-      
         return self
     }
 }

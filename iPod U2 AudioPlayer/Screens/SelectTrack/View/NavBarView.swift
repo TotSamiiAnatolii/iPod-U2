@@ -9,10 +9,6 @@ import UIKit
 
 final class NavBarView: UIView {
     
-    private let topColor: CGColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1).cgColor
-    
-    private let bottomColor: CGColor = #colorLiteral(red: 0.8907980307, green: 0.8907980307, blue: 0.8907980307, alpha: 1).cgColor
-    
     private let hieghtBorder: CGFloat = 1
     
     private let indent: CGFloat = 10
@@ -22,13 +18,10 @@ final class NavBarView: UIView {
     
     private let header = UILabel()
         .setMyStyle(font: Fonts.heder)
-    
-    private let battary: UIImageView = {
-        let image = UIImageView()
-        image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = Images.battery
-        return image
-    }()
+
+    private let battary: UIImageView = UIImageView()
+        .setMyStyle()
+        .setImage(image: Images.battery)
     
     init(header: String) {
         self.header.text = header
@@ -51,7 +44,7 @@ final class NavBarView: UIView {
         guard let gradientView = self.layer as? CAGradientLayer else {
             return;
         }
-        gradientView.colors = [topColor, bottomColor]
+        gradientView.colors = [Colors.topColorNavBar, Colors.bottomColorNavBar]
         gradientView.locations = [0.0, 1.0]
         gradientView.frame = self.bounds
     }

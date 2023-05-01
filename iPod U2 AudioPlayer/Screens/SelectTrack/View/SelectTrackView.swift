@@ -41,7 +41,7 @@ final class SelectTrackView: UIView {
     }
     
     override func draw(_ rect: CGRect) {
-        addInnerShadow()
+        self.addInnerShadow(layer: innerShadow)
     }
     
     private func setViewHierarhies() {
@@ -73,23 +73,5 @@ final class SelectTrackView: UIView {
         tableView.isUserInteractionEnabled = false
         tableView.backgroundColor = Colors.newDisplayColor
         tableView.register(SelectTrackCell.self, forCellReuseIdentifier: SelectTrackCell.identifire)
-    }
-    
-    private func addInnerShadow() {
-        innerShadow.frame = self.bounds
-        let radius = self.layer.cornerRadius
-        
-        let path = UIBezierPath(roundedRect: innerShadow.bounds.insetBy(dx: 2, dy: 2), cornerRadius: radius)
-        
-        let cutout = UIBezierPath(roundedRect: innerShadow.bounds, cornerRadius: radius).reversing()
-        path.append(cutout)
-        
-        innerShadow.shadowPath = path.cgPath
-        innerShadow.masksToBounds = true
-        innerShadow.shadowColor = Colors.shadowDisplayColor
-        innerShadow.shadowOffset = CGSize(width: 0, height: 3)
-        innerShadow.shadowOpacity = 5
-        innerShadow.shadowRadius = 3
-        innerShadow.cornerRadius = radius
     }
 }

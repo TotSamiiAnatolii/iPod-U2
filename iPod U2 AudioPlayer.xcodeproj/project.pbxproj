@@ -77,6 +77,7 @@
 		18904A9E29C0711600123C9E /* SelectTrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A9D29C0711600123C9E /* SelectTrackCell.swift */; };
 		18904A9F29C0711600123C9E /* SelectTrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A9D29C0711600123C9E /* SelectTrackCell.swift */; };
 		18904AA029C0711600123C9E /* SelectTrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A9D29C0711600123C9E /* SelectTrackCell.swift */; };
+		18BD308E29FFF1B000F0C279 /* UIView+InnerShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD308D29FFF1B000F0C279 /* UIView+InnerShadow.swift */; };
 		18E20CCD29C0B5E400E9E16C /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E20CCC29C0B5E400E9E16C /* UIView+Gradient.swift */; };
 		18E20CCF29C0BBBC00E9E16C /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E20CCE29C0BBBC00E9E16C /* PlayerView.swift */; };
 		18E20CD229C0BC0A00E9E16C /* UIIMageView+MyStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E20CD129C0BC0A00E9E16C /* UIIMageView+MyStyle.swift */; };
@@ -143,6 +144,7 @@
 		18904A9129C0702F00123C9E /* PlayerIPod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerIPod.swift; sourceTree = "<group>"; };
 		18904A9829C070D100123C9E /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		18904A9D29C0711600123C9E /* SelectTrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTrackCell.swift; sourceTree = "<group>"; };
+		18BD308D29FFF1B000F0C279 /* UIView+InnerShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+InnerShadow.swift"; sourceTree = "<group>"; };
 		18E20CCC29C0B5E400E9E16C /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
 		18E20CCE29C0BBBC00E9E16C /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		18E20CD129C0BC0A00E9E16C /* UIIMageView+MyStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIIMageView+MyStyle.swift"; sourceTree = "<group>"; };
@@ -464,6 +466,7 @@
 			children = (
 				18E20CCC29C0B5E400E9E16C /* UIView+Gradient.swift */,
 				1883B32F29C1B67A005E8D96 /* UIView+MyStyle.swift */,
+				18BD308D29FFF1B000F0C279 /* UIView+InnerShadow.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -651,6 +654,7 @@
 				18904A4929C06A3400123C9E /* Images.swift in Sources */,
 				18E20CCF29C0BBBC00E9E16C /* PlayerView.swift in Sources */,
 				18904A4C29C06AD400123C9E /* Fonts.swift in Sources */,
+				18BD308E29FFF1B000F0C279 /* UIView+InnerShadow.swift in Sources */,
 				18904A0229C0642900123C9E /* ContainerViewController.swift in Sources */,
 				18E20CDB29C0DB5200E9E16C /* ModelSelectTrackCell.swift in Sources */,
 				1883B33029C1B67A005E8D96 /* UIView+MyStyle.swift in Sources */,

@@ -15,13 +15,16 @@ enum Colors {
     
     static let controlModule: UIColor = #colorLiteral(red: 0.7803921569, green: 0.1093301586, blue: 0.1270790009, alpha: 1)
 
-//    static let shadowKeyBoardButtonColor: UIColor = #colorLiteral(red: 0.2768285479, green: 0.2830350164, blue: 0.2745786159, alpha: 1)
-
     static let borderDisplayColor: CGColor = UIColor.white.cgColor
 
     static let borderColor: UIColor = #colorLiteral(red: 0.1829668087, green: 0.2217157496, blue: 0.3078191764, alpha: 1)
+    
+    //MARK: - Color for navBar
+    static let topColorNavBar = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1).cgColor
+    
+    static let bottomColorNavBar = #colorLiteral(red: 0.8907980307, green: 0.8907980307, blue: 0.8907980307, alpha: 1).cgColor
 
-    // Color for gradientLayer
+    //MARK: - Color for gradientLayer
     static let backTop: CGColor = #colorLiteral(red: 0.8064520055, green: 0.8064520055, blue: 0.8064520055, alpha: 1).cgColor
     
     static let backWhite: CGColor = UIColor.white.cgColor

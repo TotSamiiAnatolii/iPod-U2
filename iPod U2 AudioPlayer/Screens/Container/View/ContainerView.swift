@@ -8,13 +8,7 @@
 import UIKit
 
 final class ContainerView: UIView {
-    
-    let display: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-    
+ 
     var onAction: ((ButtonPlayer) -> Void)?
     
     let controlModule = ControlModule(frame: .zero)
@@ -31,18 +25,10 @@ final class ContainerView: UIView {
     }
     
     private func setViewHierarhies() {
-        self.addSubview(display)
         self.addSubview(controlModule)
     }
     
     private func setConstraints() {
-        
-        NSLayoutConstraint.activate([
-            display.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.9),
-            display.heightAnchor.constraint(equalToConstant: 300),
-            display.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            display.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor)
-        ])
         
         NSLayoutConstraint.activate([
             controlModule.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.75),
