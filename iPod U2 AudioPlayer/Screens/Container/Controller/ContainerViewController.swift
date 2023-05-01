@@ -39,7 +39,7 @@ final class ContainerViewController: UIViewController {
         navSelectTrackVC.view.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.addSubview(navSelectTrackVC.view)
-//        navSelectTrackVC.view.bounds = self.containerView.display.bounds
+
         NSLayoutConstraint.activate([
             navSelectTrackVC.view.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.9),
             navSelectTrackVC.view.heightAnchor.constraint(equalToConstant: 300),
