@@ -8,7 +8,7 @@
 import UIKit
 
 final class ControlModule: UIView {
-
+    
     weak var delegate: ControlModuleDelegate?
     
     private var corner: CGFloat = 0.0
@@ -106,19 +106,19 @@ final class ControlModule: UIView {
             menuButton.bottomAnchor.constraint(equalTo: selectionRing.topAnchor),
             menuButton.centerXAnchor.constraint(equalTo: mainView.centerXAnchor),
         ])
-
+        
         NSLayoutConstraint.activate([
             pausePlayButton.topAnchor.constraint(equalTo: selectionRing.bottomAnchor),
             pausePlayButton.bottomAnchor.constraint(equalTo: mainView.bottomAnchor, constant: -indent),
             pausePlayButton.centerXAnchor.constraint(equalTo: mainView.centerXAnchor),
         ])
-
+        
         NSLayoutConstraint.activate([
             leftButton.leftAnchor.constraint(equalTo: mainView.leftAnchor, constant: indent),
             leftButton.rightAnchor.constraint(equalTo: selectionRing.leftAnchor),
             leftButton.centerYAnchor.constraint(equalTo: mainView.centerYAnchor),
         ])
-
+        
         NSLayoutConstraint.activate([
             rightButton.leftAnchor.constraint(equalTo: selectionRing.rightAnchor),
             rightButton.rightAnchor.constraint(equalTo: mainView.rightAnchor, constant: -indent),

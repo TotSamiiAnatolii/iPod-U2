@@ -20,7 +20,7 @@ extension UIView {
         layer.masksToBounds = true
         layer.shadowColor = Colors.shadowDisplayColor
         layer.shadowOffset = CGSize(width: 0, height: 3)
-        layer.shadowOpacity = 5
+        layer.shadowOpacity = 1
         layer.shadowRadius = 3
         layer.cornerRadius = radius
         self.layer.addSublayer(layer)
