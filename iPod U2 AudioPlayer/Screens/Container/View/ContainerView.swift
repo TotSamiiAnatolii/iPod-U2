@@ -9,9 +9,12 @@ import UIKit
 
 final class ContainerView: UIView {
  
-    var onAction: ((ButtonPlayer) -> Void)?
+    private var onAction: ((ButtonPlayer) -> Void)?
     
-    let controlModule = ControlModule(frame: .zero)
+    public let controlModule = ControlModule(frame: .zero)
+    
+    private let display: UIView = UIView()
+        .setMyStyle(color: .blue)
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -25,16 +28,24 @@ final class ContainerView: UIView {
     }
     
     private func setViewHierarhies() {
+        self.addSubview(display)
         self.addSubview(controlModule)
     }
     
     private func setConstraints() {
         
         NSLayoutConstraint.activate([
-            controlModule.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.75),
-            controlModule.heightAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.75),
+            display.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.9),
+            display.heightAnchor.constraint(equalTo: display.widthAnchor),
+            display.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            display.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            controlModule.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8),
+            controlModule.heightAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8),
             controlModule.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            controlModule.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -100)
+            controlModule.topAnchor.constraint(equalTo: display.bottomAnchor, constant: 50)
         ])
     }
 }

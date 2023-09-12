@@ -9,8 +9,8 @@ import UIKit
 
 final class ContainerViewController: UIViewController {
 
-    var onAction: ((ButtonPlayer) -> Void)?
-
+    public var onAction: ((ButtonPlayer) -> Void)?
+    
     fileprivate var containerView: ContainerView {
         guard let view = self.view as? ContainerView else { return ContainerView()}
         return view
@@ -28,6 +28,16 @@ final class ContainerViewController: UIViewController {
         containerView.controlModule.delegate = self
         showChildViewController()
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+    }
     
     private func showChildViewController() {
         let selectTrackVC = SelectTrackViewController(parentControl: self)
@@ -39,32 +49,17 @@ final class ContainerViewController: UIViewController {
         navSelectTrackVC.view.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.addSubview(navSelectTrackVC.view)
-
+        
         NSLayoutConstraint.activate([
             navSelectTrackVC.view.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.9),
-            navSelectTrackVC.view.heightAnchor.constraint(equalToConstant: 300),
+            navSelectTrackVC.view.heightAnchor.constraint(equalTo: navSelectTrackVC.view.widthAnchor),
             navSelectTrackVC.view.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             navSelectTrackVC.view.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor)
         ])
     }
 
     private func switchButton(sender: ButtonPlayer)  {
-        switch sender {
-        case .menu:
-            onAction?(.menu)
-        case .playPause:
-            onAction?(.playPause)
-        case .right:
-            onAction?(.right)
-        case .left:
-            onAction?(.left)
-        case .select:
-            onAction?(.select)
-        case .forward:
-            onAction?(.forward)
-        case .back:
-            onAction?(.back)
-        }
+        onAction?(sender)
     }
 }
 extension ContainerViewController: ControlModuleDelegate {
