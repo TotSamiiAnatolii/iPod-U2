@@ -7,6 +7,17 @@
 
 import UIKit
 
+protocol PlayerViewProtocol {
+    
+    func setTrack(track: ModelTrack)
+    
+    func updateProgressTrack(model: ModelProgressTrack)
+    
+    func forwardTrack()
+    
+    func goToBackTrack()
+}
+
 final class PlayerViewController: UIViewController {
     
     private var model: ModelTrack {
@@ -53,23 +64,6 @@ final class PlayerViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setTrack(track: ModelTrack) {
-        PlayerIPod.shared.setButtonTapSound(sound: model.track)
-        configureView(model: model)
-        
-        PlayerIPod.shared.updateProgress {[weak self] modelProgress in
-            guard let self = self else {
-                return
-            }
-            
-            self.updateProgressTrack(model: modelProgress)
-            
-            if modelProgress.endTrack {
-                self.switchButton(sender: .right)
-            }
-        }
-    }
-    
     private func switchButton(sender: ButtonPlayer)  {
         switch sender {
         case .menu:
@@ -89,20 +83,6 @@ final class PlayerViewController: UIViewController {
         }
     }
     
-    private func forwardTrack() {
-        guard let track = delegate?.forwardTrack(id: model.id) else {
-            return
-        }
-        model = track
-    }
-    
-    private func goToBackTrack() {
-        guard let track = delegate?.goToBackTrack(id: model.id) else {
-            return
-        }
-        model = track
-    }
-    
     private func configureView(model: ModelTrack) {
         let modelView = ModelPlayTrackDisplay(
             countTrack: delegate?.fetchCountTrack(id: model.id) ?? (0, 0),
@@ -117,8 +97,41 @@ final class PlayerViewController: UIViewController {
     private func backSelectTrack() {
         self.navigationController?.popViewController(animated: true)
     }
+}
+extension PlayerViewController: PlayerViewProtocol {
     
-    private func updateProgressTrack(model: ModelProgressTrack) {
+    func setTrack(track: ModelTrack) {
+        PlayerIPod.shared.setButtonTapSound(sound: model.track)
+        configureView(model: model)
+        
+        PlayerIPod.shared.updateProgress {[weak self] modelProgress in
+            guard let self = self else {
+                return
+            }
+            
+            self.updateProgressTrack(model: modelProgress)
+            
+            if modelProgress.endTrack {
+                self.switchButton(sender: .right)
+            }
+        }
+    }
+    
+    func forwardTrack() {
+        guard let track = delegate?.forwardTrack(id: model.id) else {
+            return
+        }
+        model = track
+    }
+    
+     func goToBackTrack() {
+        guard let track = delegate?.goToBackTrack(id: model.id) else {
+            return
+        }
+        model = track
+    }
+    
+    func updateProgressTrack(model: ModelProgressTrack) {
         playerView.updateProgressView(model: model)
     }
 }
