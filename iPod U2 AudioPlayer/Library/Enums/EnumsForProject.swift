@@ -18,7 +18,6 @@ enum ButtonPlayer: String {
 }
 
 enum StatePlayer {
-
     case pause
     case play
 }

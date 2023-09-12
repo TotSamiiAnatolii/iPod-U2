@@ -52,7 +52,7 @@ final class ContainerViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             navSelectTrackVC.view.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.9),
-            navSelectTrackVC.view.heightAnchor.constraint(equalTo: navSelectTrackVC.view.widthAnchor),
+            navSelectTrackVC.view.heightAnchor.constraint(equalToConstant: 300),
             navSelectTrackVC.view.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             navSelectTrackVC.view.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor)
         ])

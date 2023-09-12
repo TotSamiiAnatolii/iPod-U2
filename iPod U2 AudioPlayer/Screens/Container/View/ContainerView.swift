@@ -36,7 +36,7 @@ final class ContainerView: UIView {
         
         NSLayoutConstraint.activate([
             display.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.9),
-            display.heightAnchor.constraint(equalTo: display.widthAnchor),
+            display.heightAnchor.constraint(equalToConstant: 300),
             display.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             display.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor)
         ])
