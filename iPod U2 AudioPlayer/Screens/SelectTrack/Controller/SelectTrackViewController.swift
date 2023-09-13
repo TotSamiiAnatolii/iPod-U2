@@ -7,11 +7,18 @@
 
 import UIKit
 
+protocol SelectTrackViewProtocol {
+    
+    func selectGoToBackTrack()
+    
+    func selectNextTrack()
+}
+
 final class SelectTrackViewController: UIViewController {
     
     fileprivate var parentControl: ContainerViewController
     
-    fileprivate var twoView: SelectTrackView {
+    fileprivate var selectTrackView: SelectTrackView {
         guard let view = self.view as? SelectTrackView else { return SelectTrackView()}
         return view
     }
@@ -23,9 +30,9 @@ final class SelectTrackViewController: UIViewController {
     private var tracks: [ModelTrack] = [
         ModelTrack(id: UUID(), nameTrack: "liam_m-i-know", namePerformer: "liam_m-i-know", nameAlbum: "liam_m-i-know", track: Sounds.track1, image: Images.liammiknow)]
     
-    private var arrayCell: [ModelSelectTrackCell] = [] {
+    private var modelsCell: [ModelSelectTrackCell] = [] {
         didSet {
-            twoView.tableView.reloadData()
+            selectTrackView.tableView.reloadData()
         }
     }
     
@@ -52,12 +59,9 @@ final class SelectTrackViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.translatesAutoresizingMaskIntoConstraints = true
-        self.navigationController?.navigationBar.isHidden = true
-        
-        twoView.tableView.delegate = self
-        twoView.tableView.dataSource = self
-        arrayCell = map(model: tracks)
+        settingView()
+        prepareTableView()
+        modelsCell = map(model: tracks)
         setStartTrack()
     }
     
@@ -75,13 +79,23 @@ final class SelectTrackViewController: UIViewController {
     
     private func setStartTrack() {
         tracks[lastIndex.row].isSelected = true
-        twoView.tableView.selectRow(at: lastIndex, animated: true, scrollPosition: .top)
+        selectTrackView.tableView.selectRow(at: lastIndex, animated: true, scrollPosition: .top)
     }
     
     private func preparationForTransition() {
         let playerVC = PlayerViewController(parentControl: parentControl, model: tracks[lastIndex.row])
         playerVC.delegate = self
         navigationController?.pushViewController(playerVC, animated: true)
+    }
+    
+    private func prepareTableView() {
+        selectTrackView.tableView.delegate = self
+        selectTrackView.tableView.dataSource = self
+    }
+    
+    private func settingView() {
+        self.view.translatesAutoresizingMaskIntoConstraints = true
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     private func selectGoToBackTrack() {
@@ -96,7 +110,7 @@ final class SelectTrackViewController: UIViewController {
             
             tracks[lastIndex.row].isSelected = true
             
-            twoView.tableView.selectRow(at: lastIndex, animated: true, scrollPosition: .middle)
+            selectTrackView.tableView.selectRow(at: lastIndex, animated: true, scrollPosition: .middle)
         }
     }
     
@@ -113,7 +127,7 @@ final class SelectTrackViewController: UIViewController {
             lastIndex.row = indexNextCell
             
             tracks[lastIndex.row].isSelected = true
-            twoView.tableView.selectRow(at: lastIndex, animated: true, scrollPosition: .middle)
+            selectTrackView.tableView.selectRow(at: lastIndex, animated: true, scrollPosition: .middle)
         }
     }
     
@@ -148,6 +162,7 @@ extension SelectTrackViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SelectTrackCell.identifire, for: indexPath) as? SelectTrackCell else {
             return UITableViewCell()
         }
@@ -158,7 +173,7 @@ extension SelectTrackViewController: UITableViewDelegate, UITableViewDataSource 
         case false:
             cell.isSelected = false
         }
-        cell.configure(with: arrayCell[indexPath.row])
+        cell.configure(with: modelsCell[indexPath.row])
         
         return cell
     }

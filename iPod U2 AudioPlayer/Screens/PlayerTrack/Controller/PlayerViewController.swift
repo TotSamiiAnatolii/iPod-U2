@@ -124,7 +124,7 @@ extension PlayerViewController: PlayerViewProtocol {
         model = track
     }
     
-     func goToBackTrack() {
+    func goToBackTrack() {
         guard let track = delegate?.goToBackTrack(id: model.id) else {
             return
         }
