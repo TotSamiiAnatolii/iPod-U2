@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1883B33029C1B67A005E8D96 /* UIView+MyStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1883B32F29C1B67A005E8D96 /* UIView+MyStyle.swift */; };
+		188E58B72AB6250F00BE21B5 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188E58B62AB6250F00BE21B5 /* Mapper.swift */; };
 		189049FE29C0642900123C9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189049FD29C0642900123C9E /* AppDelegate.swift */; };
 		18904A0029C0642900123C9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189049FF29C0642900123C9E /* SceneDelegate.swift */; };
 		18904A0229C0642900123C9E /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A0129C0642900123C9E /* ContainerViewController.swift */; };
@@ -105,6 +106,7 @@
 
 /* Begin PBXFileReference section */
 		1883B32F29C1B67A005E8D96 /* UIView+MyStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+MyStyle.swift"; sourceTree = "<group>"; };
+		188E58B62AB6250F00BE21B5 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
 		189049FA29C0642900123C9E /* iPod U2 AudioPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iPod U2 AudioPlayer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		189049FD29C0642900123C9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		189049FF29C0642900123C9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -178,11 +180,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		187DD3F62AB0ED1A00666565 /* Parser */ = {
+		187DD3F62AB0ED1A00666565 /* Mapper */ = {
 			isa = PBXGroup;
 			children = (
+				188E58B62AB6250F00BE21B5 /* Mapper.swift */,
 			);
-			path = Parser;
+			path = Mapper;
 			sourceTree = "<group>";
 		};
 		189049F129C0642800123C9E = {
@@ -427,7 +430,7 @@
 		18904A8829C06FD500123C9E /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				187DD3F62AB0ED1A00666565 /* Parser */,
+				187DD3F62AB0ED1A00666565 /* Mapper */,
 				18904A8929C06FF400123C9E /* PlayerAppSounds.swift */,
 				18904A9129C0702F00123C9E /* PlayerIPod.swift */,
 			);
@@ -682,6 +685,7 @@
 				18904A6D29C06D6800123C9E /* ModelProgressTrack.swift in Sources */,
 				18904A7129C06DB600123C9E /* ModelTrack.swift in Sources */,
 				18E20CD529C0BD2600E9E16C /* UIStackView+MyStyle.swift in Sources */,
+				188E58B72AB6250F00BE21B5 /* Mapper.swift in Sources */,
 				18904A3D29C0681F00123C9E /* EnumsForProject.swift in Sources */,
 				18904A9E29C0711600123C9E /* SelectTrackCell.swift in Sources */,
 				18904A3529C0672600123C9E /* ControlModule.swift in Sources */,

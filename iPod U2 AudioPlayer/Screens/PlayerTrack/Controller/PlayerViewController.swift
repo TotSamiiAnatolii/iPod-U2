@@ -27,6 +27,8 @@ final class PlayerViewController: UIViewController {
         }
     }
     
+    private let mapper = Mapper()
+    
     weak var parentControl: ContainerViewController?
     
     weak var delegate: PlayerIPodDelegate?
@@ -84,13 +86,8 @@ final class PlayerViewController: UIViewController {
     }
     
     private func configureView(model: ModelTrack) {
-        let modelView = ModelPlayTrackDisplay(
-            countTrack: delegate?.fetchCountTrack(id: model.id) ?? (0, 0),
-            nameTrack: model.nameTrack,
-            namePerformer: model.namePerformer,
-            nameAlbum: model.nameAlbum,
-            imageTrack: model.image)
-        
+        let countTrack = delegate?.fetchCountTrack(id: model.id)
+        let modelView = mapper.map(model: model, countTrack: countTrack)
         playerView.configure(with: modelView)
     }
     
