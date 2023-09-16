@@ -28,6 +28,9 @@ final class SelectTrackViewController: UIViewController {
     private var lastIndex: IndexPath = [0, 0]
     
     private var tracks: [ModelTrack] = [
+        ModelTrack(id: UUID(), nameTrack: "liam_m-i-know", namePerformer: "liam_m-i-know", nameAlbum: "liam_m-i-know", track: Sounds.track1, image: Images.liammiknow),
+        ModelTrack(id: UUID(), nameTrack: "liam_m-i-know", namePerformer: "liam_m-i-know", nameAlbum: "liam_m-i-know", track: Sounds.track1, image: Images.liammiknow),
+        ModelTrack(id: UUID(), nameTrack: "liam_m-i-know", namePerformer: "liam_m-i-know", nameAlbum: "liam_m-i-know", track: Sounds.track1, image: Images.liammiknow),
         ModelTrack(id: UUID(), nameTrack: "liam_m-i-know", namePerformer: "liam_m-i-know", nameAlbum: "liam_m-i-know", track: Sounds.track1, image: Images.liammiknow)]
     
     private var modelsCell: [ModelSelectTrackCell] = [] {
@@ -166,15 +169,8 @@ extension SelectTrackViewController: UITableViewDelegate, UITableViewDataSource 
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SelectTrackCell.identifire, for: indexPath) as? SelectTrackCell else {
             return UITableViewCell()
         }
-        
-        switch tracks[indexPath.row].isSelected {
-        case true:
-            cell.isSelected = true
-        case false:
-            cell.isSelected = false
-        }
+        cell.isSelected = tracks[indexPath.row].isSelected
         cell.configure(with: modelsCell[indexPath.row])
-        
         return cell
     }
     

@@ -128,7 +128,6 @@ final class ControlModule: UIView {
     
     private func addGesture(view: UIView, target: UIView) {
         let innerRadius = selectButton.frame.height / 2
-        
         let outerRadius = selectionRing.frame.height
         
         view.addGestureRecognizer(IPodGestureRecognizer(midPoint: mainView.center, innerRadius: innerRadius, outerRadius: outerRadius, target: target, action: #selector(rotateGesture(recognizer:))))
@@ -144,8 +143,9 @@ final class ControlModule: UIView {
         let minValue: CGFloat = -1
         
         if let rotation = recognizer.rotation {
+            let rotationDegrees = (rotation.degrees / 360) * 100
             
-            corner += (rotation.degrees / 360) * 100
+            corner += rotationDegrees
             if corner > maxValue {
                 delegate?.onAction(sender: .forward)
                 corner = 0
