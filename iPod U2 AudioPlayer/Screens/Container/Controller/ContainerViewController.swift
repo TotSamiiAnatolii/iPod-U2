@@ -29,16 +29,6 @@ final class ContainerViewController: UIViewController {
         showChildViewController()
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-    }
-    
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        
-    }
-    
     private func showChildViewController() {
         let selectTrackVC = SelectTrackViewController(parentControl: self)
     
