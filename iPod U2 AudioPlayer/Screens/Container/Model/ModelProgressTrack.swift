@@ -22,7 +22,6 @@ struct ModelProgressTrack {
     }
     
     var endTrack: Bool {
-     
         return Int(currentDuration) == 0 ? true : false
     }
 }

@@ -8,9 +8,7 @@
 import UIKit
 
 final class ContainerView: UIView {
- 
-    private var onAction: ((ButtonPlayer) -> Void)?
-    
+     
     public let controlModule = ControlModule(frame: .zero)
     
     private let display: UIView = UIView()

@@ -9,7 +9,7 @@ import Foundation
 
 protocol ControlModuleDelegate: AnyObject {
     
-    func onAction(sender: ButtonPlayer)
+    func controlModuleAction(sender: ButtonPlayer)
 }
 
 protocol ConfigurableView {

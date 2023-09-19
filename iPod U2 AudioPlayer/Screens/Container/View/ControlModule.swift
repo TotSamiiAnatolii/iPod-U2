@@ -135,7 +135,7 @@ final class ControlModule: UIView {
     
     @objc func buttonAction(sender: PlayerButton) {
         guard let type = sender.typeButton else { return }
-        delegate?.onAction(sender: type)
+        delegate?.controlModuleAction(sender: type)
     }
     
     @objc func rotateGesture(recognizer: IPodGestureRecognizer) {
@@ -147,11 +147,11 @@ final class ControlModule: UIView {
             
             corner += rotationDegrees
             if corner > maxValue {
-                delegate?.onAction(sender: .forward)
+                delegate?.controlModuleAction(sender: .forward)
                 corner = 0
             }
             if corner < minValue {
-                delegate?.onAction(sender: .back)
+                delegate?.controlModuleAction(sender: .back)
                 corner = maxValue
             }
         }

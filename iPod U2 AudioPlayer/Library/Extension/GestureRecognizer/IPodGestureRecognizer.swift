@@ -27,17 +27,15 @@ final class IPodGestureRecognizer: UIGestureRecognizer {
                 var rotation = angleBetween(pointA: currentPoint, andPointB: previousPoint)
                 if (rotation > CGFloat(π)) {
                     
-                    rotation -= CGFloat(π)*2
+                    rotation -= CGFloat(π) * 2
                 }
                 else if (rotation < -CGFloat(π)) {
                     
-                    rotation += CGFloat(π)*2
+                    rotation += CGFloat(π) * 2
                 }
-                
                 return rotation
             }
         }
-        
         return nil
     }
    
@@ -60,7 +58,7 @@ final class IPodGestureRecognizer: UIGestureRecognizer {
     func distanceBetween(pointA: CGPoint, andPointB pointB: CGPoint) -> CGFloat {
         let dx = Float(pointA.x - pointB.x)
         let dy = Float(pointA.y - pointB.y)
-        return CGFloat(sqrtf(dx*dx + dy*dy))
+        return CGFloat(sqrtf(dx * dx + dy * dy))
     }
     
     func angleForPoint(point: CGPoint) -> CGFloat {

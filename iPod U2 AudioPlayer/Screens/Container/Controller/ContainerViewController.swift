@@ -12,7 +12,9 @@ final class ContainerViewController: UIViewController {
     public var onAction: ((ButtonPlayer) -> Void)?
     
     fileprivate var containerView: ContainerView {
-        guard let view = self.view as? ContainerView else { return ContainerView()}
+        guard let view = self.view as? ContainerView else {
+            return ContainerView()
+        }
         return view
     }
     
@@ -53,7 +55,8 @@ final class ContainerViewController: UIViewController {
     }
 }
 extension ContainerViewController: ControlModuleDelegate {
-    func onAction(sender: ButtonPlayer) {
+    
+    func controlModuleAction(sender: ButtonPlayer) {
         switchButton(sender: sender)
     }
 }
