@@ -43,7 +43,6 @@ final class IPodGestureRecognizer: UIGestureRecognizer {
         if let nowPoint = self.currentPoint {
             return self.distanceBetween(pointA: self.midPoint, andPointB: nowPoint)
         }
-        
         return nil
     }
     
