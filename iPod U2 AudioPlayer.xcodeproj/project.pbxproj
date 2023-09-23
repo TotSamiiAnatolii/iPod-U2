@@ -78,6 +78,8 @@
 		18904A9E29C0711600123C9E /* SelectTrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A9D29C0711600123C9E /* SelectTrackCell.swift */; };
 		18904A9F29C0711600123C9E /* SelectTrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A9D29C0711600123C9E /* SelectTrackCell.swift */; };
 		18904AA029C0711600123C9E /* SelectTrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A9D29C0711600123C9E /* SelectTrackCell.swift */; };
+		1893A4CD2ABF6B12007CD8C7 /* PlayerBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1893A4CC2ABF6B12007CD8C7 /* PlayerBaseViewController.swift */; };
+		1893A4D12ABF7315007CD8C7 /* Tracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1893A4D02ABF7315007CD8C7 /* Tracks.swift */; };
 		18BD308E29FFF1B000F0C279 /* UIView+InnerShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD308D29FFF1B000F0C279 /* UIView+InnerShadow.swift */; };
 		18E20CCD29C0B5E400E9E16C /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E20CCC29C0B5E400E9E16C /* UIView+Gradient.swift */; };
 		18E20CCF29C0BBBC00E9E16C /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E20CCE29C0BBBC00E9E16C /* PlayerView.swift */; };
@@ -146,6 +148,8 @@
 		18904A9129C0702F00123C9E /* PlayerIPod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerIPod.swift; sourceTree = "<group>"; };
 		18904A9829C070D100123C9E /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		18904A9D29C0711600123C9E /* SelectTrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTrackCell.swift; sourceTree = "<group>"; };
+		1893A4CC2ABF6B12007CD8C7 /* PlayerBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerBaseViewController.swift; sourceTree = "<group>"; };
+		1893A4D02ABF7315007CD8C7 /* Tracks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracks.swift; sourceTree = "<group>"; };
 		18BD308D29FFF1B000F0C279 /* UIView+InnerShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+InnerShadow.swift"; sourceTree = "<group>"; };
 		18E20CCC29C0B5E400E9E16C /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
 		18E20CCE29C0BBBC00E9E16C /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
@@ -272,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				18904A0129C0642900123C9E /* ContainerViewController.swift */,
+				1893A4CC2ABF6B12007CD8C7 /* PlayerBaseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -430,9 +435,9 @@
 		18904A8829C06FD500123C9E /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				1893A4CF2ABF72ED007CD8C7 /* Tracks */,
+				1893A4CE2ABF72CB007CD8C7 /* Players */,
 				187DD3F62AB0ED1A00666565 /* Mapper */,
-				18904A8929C06FF400123C9E /* PlayerAppSounds.swift */,
-				18904A9129C0702F00123C9E /* PlayerIPod.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -470,6 +475,23 @@
 				18904A9D29C0711600123C9E /* SelectTrackCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		1893A4CE2ABF72CB007CD8C7 /* Players */ = {
+			isa = PBXGroup;
+			children = (
+				18904A9129C0702F00123C9E /* PlayerIPod.swift */,
+				18904A8929C06FF400123C9E /* PlayerAppSounds.swift */,
+			);
+			path = Players;
+			sourceTree = "<group>";
+		};
+		1893A4CF2ABF72ED007CD8C7 /* Tracks */ = {
+			isa = PBXGroup;
+			children = (
+				1893A4D02ABF7315007CD8C7 /* Tracks.swift */,
+			);
+			path = Tracks;
 			sourceTree = "<group>";
 		};
 		18E20CCB29C0B5C800E9E16C /* UIView */ = {
@@ -653,6 +675,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1893A4CD2ABF6B12007CD8C7 /* PlayerBaseViewController.swift in Sources */,
 				18904A5F29C06C2D00123C9E /* NavBarView.swift in Sources */,
 				18904A3A29C067AD00123C9E /* PlayerButton.swift in Sources */,
 				18904A5B29C06BE600123C9E /* Colors.swift in Sources */,
@@ -661,6 +684,7 @@
 				18904A6429C06C8E00123C9E /* UILabel+MyStyle.swift in Sources */,
 				18E20CD229C0BC0A00E9E16C /* UIIMageView+MyStyle.swift in Sources */,
 				18904A3329C066E100123C9E /* ContainerView.swift in Sources */,
+				1893A4D12ABF7315007CD8C7 /* Tracks.swift in Sources */,
 				18904A9929C070D100123C9E /* PlayerViewController.swift in Sources */,
 				18904A4929C06A3400123C9E /* Images.swift in Sources */,
 				18E20CCF29C0BBBC00E9E16C /* PlayerView.swift in Sources */,

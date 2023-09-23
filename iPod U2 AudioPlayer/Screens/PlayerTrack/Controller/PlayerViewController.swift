@@ -18,7 +18,7 @@ protocol PlayerViewProtocol {
     func goToBackTrack()
 }
 
-final class PlayerViewController: UIViewController {
+final class PlayerViewController: PlayerBaseViewController<PlayerView> {
     
     private var model: ModelTrack {
         didSet {
@@ -29,44 +29,23 @@ final class PlayerViewController: UIViewController {
     
     private let mapper = Mapper()
     
-    weak var parentControl: ContainerViewController?
-    
     weak var delegate: PlayerIPodDelegate?
-    
-    fileprivate var playerView: PlayerView {
-        guard let view = self.view as? PlayerView else { return PlayerView()}
-        return view
-    }
-    
-    override func loadView() {
-        super.loadView()
-        self.view = PlayerView(frame: UIScreen.main.bounds)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.translatesAutoresizingMaskIntoConstraints = true
-        
-        parentControl?.onAction = {[weak self] type in
-            guard let self = self else {
-                return
-            }
-            self.switchButton(sender: type)
-        }
         setTrack(track: model)
     }
     
     init(parentControl: ContainerViewController, model: ModelTrack) {
-        self.parentControl = parentControl
         self.model = model
-        super.init(nibName: nil, bundle: nil)
+        super.init(parentControl: parentControl)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func switchButton(sender: ButtonPlayer)  {
+    override func switchButton(sender: ButtonPlayer)  {
         switch sender {
         case .menu:
             backSelectTrack()
@@ -88,7 +67,7 @@ final class PlayerViewController: UIViewController {
     private func configureView(model: ModelTrack) {
         let countTrack = delegate?.fetchCountTrack(id: model.id)
         let modelView = mapper.map(model: model, countTrack: countTrack)
-        playerView.configure(with: modelView)
+        contentView.configure(with: modelView)
     }
     
     private func backSelectTrack() {
@@ -129,6 +108,6 @@ extension PlayerViewController: PlayerViewProtocol {
     }
     
     func updateProgressTrack(model: ModelProgressTrack) {
-        playerView.updateProgressView(model: model)
+        contentView.updateProgressView(model: model)
     }
 }

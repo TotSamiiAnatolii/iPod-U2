@@ -14,28 +14,19 @@ protocol SelectTrackViewProtocol {
     func selectNextTrack()
 }
 
-final class SelectTrackViewController: UIViewController {
-    
-    fileprivate var parentControl: ContainerViewController
-    
-    fileprivate var selectTrackView: SelectTrackView {
-        guard let view = self.view as? SelectTrackView else { return SelectTrackView()}
-        return view
-    }
-    
+final class SelectTrackViewController: PlayerBaseViewController<SelectTrackView> {
+
     private let heightForRowAt: CGFloat = 30
     
     private var lastIndex: IndexPath = [0, 0]
     
-    private var tracks: [ModelTrack] = [
-        ModelTrack(id: UUID(), nameTrack: "liam_m-i-know", namePerformer: "liam_m-i-know", nameAlbum: "liam_m-i-know", track: Sounds.track1, image: Images.liammiknow),
-        ModelTrack(id: UUID(), nameTrack: "liam_m-i-know", namePerformer: "liam_m-i-know", nameAlbum: "liam_m-i-know", track: Sounds.track1, image: Images.liammiknow),
-        ModelTrack(id: UUID(), nameTrack: "liam_m-i-know", namePerformer: "liam_m-i-know", nameAlbum: "liam_m-i-know", track: Sounds.track1, image: Images.liammiknow),
-        ModelTrack(id: UUID(), nameTrack: "liam_m-i-know", namePerformer: "liam_m-i-know", nameAlbum: "liam_m-i-know", track: Sounds.track1, image: Images.liammiknow)]
+    private let track = Tracks()
+    
+    private lazy var tracks: [ModelTrack] = track.tracks
     
     private var modelsCell: [ModelSelectTrackCell] = [] {
         didSet {
-            selectTrackView.tableView.reloadData()
+            contentView.tableView.reloadData()
         }
     }
     
@@ -46,9 +37,8 @@ final class SelectTrackViewController: UIViewController {
         }
     }
     
-    init(parentControl: ContainerViewController) {
-        self.parentControl = parentControl
-        super.init(nibName: nil, bundle: nil)
+    override init(parentControl: ContainerViewController) {
+        super.init(parentControl: parentControl)
     }
     
     required init?(coder: NSCoder) {
@@ -67,33 +57,33 @@ final class SelectTrackViewController: UIViewController {
         modelsCell = map(model: tracks)
         setStartTrack()
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        parentControl.onAction = { type in
+
+        parentControl!.onAction = { type in
             self.switchButton(sender: type)
         }
     }
-    
+
     private func searchIndexNextTrack(id: UUID) -> Int {
         return tracks.firstIndex {$0.id == id} ?? 0
     }
     
     private func setStartTrack() {
         tracks[lastIndex.row].isSelected = true
-        selectTrackView.tableView.selectRow(at: lastIndex, animated: true, scrollPosition: .top)
+        contentView.tableView.selectRow(at: lastIndex, animated: true, scrollPosition: .top)
     }
     
     private func preparationForTransition() {
-        let playerVC = PlayerViewController(parentControl: parentControl, model: tracks[lastIndex.row])
+        let playerVC = PlayerViewController(parentControl: parentControl!, model: tracks[lastIndex.row])
         playerVC.delegate = self
         navigationController?.pushViewController(playerVC, animated: true)
     }
     
     private func prepareTableView() {
-        selectTrackView.tableView.delegate = self
-        selectTrackView.tableView.dataSource = self
+        contentView.tableView.delegate = self
+        contentView.tableView.dataSource = self
     }
     
     private func settingView() {
@@ -113,7 +103,7 @@ final class SelectTrackViewController: UIViewController {
             
             tracks[lastIndex.row].isSelected = true
             
-            selectTrackView.tableView.selectRow(at: lastIndex, animated: true, scrollPosition: .middle)
+            contentView.tableView.selectRow(at: lastIndex, animated: true, scrollPosition: .middle)
         }
     }
     
@@ -130,11 +120,11 @@ final class SelectTrackViewController: UIViewController {
             lastIndex.row = indexNextCell
             
             tracks[lastIndex.row].isSelected = true
-            selectTrackView.tableView.selectRow(at: lastIndex, animated: true, scrollPosition: .middle)
+            contentView.tableView.selectRow(at: lastIndex, animated: true, scrollPosition: .middle)
         }
     }
     
-    private func switchButton(sender: ButtonPlayer)  {
+    override func switchButton(sender: ButtonPlayer)  {
         switch sender {
         case .menu:
             preparationForTransition()
