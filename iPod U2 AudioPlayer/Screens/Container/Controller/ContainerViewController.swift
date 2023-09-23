@@ -34,7 +34,7 @@ final class ContainerViewController: UIViewController {
     private func showChildViewController() {
         let selectTrackVC = SelectTrackViewController(parentControl: self)
     
-        let navSelectTrackVC = UINavigationController(rootViewController: selectTrackVC)
+        let navSelectTrackVC = IPodNavigationController(rootViewController: selectTrackVC)
         
         self.addChild(navSelectTrackVC)
         
