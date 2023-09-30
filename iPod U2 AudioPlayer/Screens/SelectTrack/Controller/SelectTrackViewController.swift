@@ -51,11 +51,13 @@ final class SelectTrackViewController: PlayerBaseViewController<SelectTrackView>
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad()        
         settingView()
         prepareTableView()
         modelsCell = map(model: tracks)
         setStartTrack()
+        contentView.tableView.contentInsetAdjustmentBehavior = .never
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -88,7 +90,6 @@ final class SelectTrackViewController: PlayerBaseViewController<SelectTrackView>
     
     private func settingView() {
         self.view.translatesAutoresizingMaskIntoConstraints = true
-        self.navigationController?.navigationBar.isHidden = true
     }
     
     private func selectGoToBackTrack() {
@@ -172,6 +173,16 @@ extension SelectTrackViewController: UITableViewDelegate, UITableViewDataSource 
         if tracks[indexPath.row].isSelected  {
             cell.isSelected = true
         }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
+    {
+        return CGFloat.leastNormalMagnitude
+    }
+
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat
+    {
+        return CGFloat.leastNormalMagnitude
     }
 }
 extension SelectTrackViewController: PlayerIPodDelegate {

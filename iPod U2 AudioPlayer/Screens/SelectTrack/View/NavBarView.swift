@@ -13,6 +13,10 @@ final class NavBarView: UIView {
     
     private let indent: CGFloat = 10
     
+    private let imageCurrentState = UIImageView()
+        .setMyStyle()
+        .setImage(image: Images.play)
+    
     private let borderView = UIView()
         .setMyStyle(color: Colors.borderColor)
     
@@ -50,6 +54,7 @@ final class NavBarView: UIView {
     }
     
     private func setViewHierarhies() {
+        self.addSubview(imageCurrentState)
         self.addSubview(borderView)
         self.addSubview(header)
         self.addSubview(battary)
@@ -64,14 +69,21 @@ final class NavBarView: UIView {
         
         NSLayoutConstraint.activate([
             header.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            header.topAnchor.constraint(equalTo: self.topAnchor, constant: indent)
+            header.centerYAnchor.constraint(equalTo: self.centerYAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            battary.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.8),
+            battary.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.85),
             battary.widthAnchor.constraint(equalTo: battary.heightAnchor),
             battary.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -indent),
-            battary.centerYAnchor.constraint(equalTo: header.centerYAnchor)
+            battary.centerYAnchor.constraint(equalTo: self.centerYAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            imageCurrentState.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.5),
+            imageCurrentState.widthAnchor.constraint(equalTo: imageCurrentState.heightAnchor),
+            imageCurrentState.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            imageCurrentState.leftAnchor.constraint(equalTo: self.leftAnchor, constant: indent)
         ])
     }
 }

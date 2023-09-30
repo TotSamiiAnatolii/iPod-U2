@@ -24,14 +24,8 @@ final class PlayerView: UIView {
     private let topIndentProgressBar: CGFloat = 20
     
     private let borderColor = Colors.borderDisplayColor
-    
-    private let stateView = NavBarView(header: "Now playing")
-    
+        
     private let progressBar = ProgressBar(frame: .zero)
-    
-    private let imageCurrentState = UIImageView()
-        .setMyStyle()
-        .setImage(image: Images.play)
     
     private let labelCount = UILabel()
         .setMyStyle(font: Fonts.countTrack)
@@ -81,8 +75,7 @@ final class PlayerView: UIView {
     }
     
     private func setViewHierarhies() {
-        self.addSubview(stateView)
-        self.addSubview(imageCurrentState)
+
         self.addSubview(labelCount)
         self.addSubview(imageTrack)
         self.addSubview(mainStackView)
@@ -95,21 +88,9 @@ final class PlayerView: UIView {
     }
     
     private func setupConstraints() {
+
         NSLayoutConstraint.activate([
-            stateView.widthAnchor.constraint(equalTo: self.widthAnchor),
-            stateView.heightAnchor.constraint(equalToConstant: heightStateView),
-            stateView.topAnchor.constraint(equalTo: self.topAnchor)
-        ])
-        
-        NSLayoutConstraint.activate([
-            imageCurrentState.heightAnchor.constraint(equalTo: stateView.heightAnchor, multiplier: 0.5),
-            imageCurrentState.widthAnchor.constraint(equalTo: imageCurrentState.heightAnchor),
-            imageCurrentState.centerYAnchor.constraint(equalTo: stateView.centerYAnchor),
-            imageCurrentState.leftAnchor.constraint(equalTo: self.leftAnchor, constant: indent)
-        ])
-        
-        NSLayoutConstraint.activate([
-            labelCount.topAnchor.constraint(equalTo: stateView.bottomAnchor, constant: indent),
+            labelCount.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: indent),
             labelCount.leftAnchor.constraint(equalTo: self.leftAnchor, constant: indent)
         ])
         
@@ -156,12 +137,12 @@ final class PlayerView: UIView {
     }
     
     private func setStateCurrent(state: StatePlayer) {
-        switch state {
-        case .pause:
-            self.imageCurrentState.image = Images.pause
-        case .play:
-            self.imageCurrentState.image = Images.play
-        }
+//        switch state {
+//        case .pause:
+//            self.imageCurrentState.image = Images.pause
+//        case .play:
+//            self.imageCurrentState.image = Images.play
+//        }
     }
 
     public func updateProgressView(model: ModelProgressTrack) {

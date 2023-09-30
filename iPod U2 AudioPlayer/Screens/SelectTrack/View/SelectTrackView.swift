@@ -14,9 +14,7 @@ final class SelectTrackView: UIView {
     private let navBarView = NavBarView(header: "Songs")
         
     private let borderWidth: CGFloat = 0.7
-    
-    private let heightNavBarView: CGFloat = 35
-    
+        
     private let borderColor = Colors.borderDisplayColor
     
     public var tableView: UITableView!
@@ -45,29 +43,21 @@ final class SelectTrackView: UIView {
     }
     
     private func setViewHierarhies() {
-        self.addSubview(navBarView)
         self.addSubview(tableView)
         self.layer.addSublayer(innerShadow)
     }
     
     private func setupConstraints() {
-
         NSLayoutConstraint.activate([
-            navBarView.widthAnchor.constraint(equalTo: self.widthAnchor),
-            navBarView.heightAnchor.constraint(equalToConstant: heightNavBarView),
-            navBarView.topAnchor.constraint(equalTo: self.topAnchor)
-        ])
-
-        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
             tableView.leftAnchor.constraint(equalTo: self.leftAnchor),
             tableView.rightAnchor.constraint(equalTo: self.rightAnchor),
-            tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            tableView.topAnchor.constraint(equalTo: navBarView.bottomAnchor)
+            tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
     }
     
     private func configureTableView() {
-        tableView = UITableView()
+        tableView = UITableView(frame: .zero, style: .plain)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorStyle = .none
         tableView.isUserInteractionEnabled = false
