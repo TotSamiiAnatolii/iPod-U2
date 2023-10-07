@@ -34,6 +34,7 @@ final class PlayerViewController: PlayerBaseViewController<PlayerView> {
     override func viewDidLoad() {
         super.viewDidLoad()
         setTrack(track: model)
+        setupNavigationBar(letftItem: Images.play, header: ScreenTitle.player.rawValue)
     }
     
     init(parentControl: ContainerViewController, model: ModelTrack) {
@@ -51,6 +52,7 @@ final class PlayerViewController: PlayerBaseViewController<PlayerView> {
             backSelectTrack()
         case .playPause:
             PlayerIPod.shared.statePlayer = PlayerIPod.shared.statePlayer == .play ? .pause : .play
+            setStatePlayerNavBar(state: PlayerIPod.shared.statePlayer)
         case .right:
             forwardTrack()
         case .left:
@@ -72,6 +74,11 @@ final class PlayerViewController: PlayerBaseViewController<PlayerView> {
     
     private func backSelectTrack() {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    private func setStatePlayerNavBar(state: StatePlayer) {
+        guard let navigationController = self.navigationController as? IPodNavigationController else { return }
+        navigationController.setStatePlayer(state: state)
     }
 }
 extension PlayerViewController: PlayerViewProtocol {

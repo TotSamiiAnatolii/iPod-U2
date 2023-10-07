@@ -136,20 +136,20 @@ final class PlayerView: UIView {
         self.imageTrack.layer.cornerRadius = 2
     }
     
-    private func setStateCurrent(state: StatePlayer) {
-//        switch state {
-//        case .pause:
-//            self.imageCurrentState.image = Images.pause
-//        case .play:
-//            self.imageCurrentState.image = Images.play
-//        }
-    }
+//    private func setStateCurrent(state: StatePlayer) {
+////        switch state {
+////        case .pause:
+////            self.imageCurrentState.image = Images.pause
+////        case .play:
+////            self.imageCurrentState.image = Images.play
+////        }
+//    }
 
     public func updateProgressView(model: ModelProgressTrack) {
         self.labelCurrentTime.text = model.currentTime.stringFromTimeInterval()
         self.labelDurationTime.text = "-\(model.currentDuration.stringFromTimeInterval())"
         self.progressBar.convertValue(value: model.progress)
-        setStateCurrent(state: model.stateCurrent)
+//        setStateCurrent(state: model.stateCurrent)
     }
 }
 extension PlayerView: ConfigurableView {

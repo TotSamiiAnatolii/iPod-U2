@@ -81,7 +81,6 @@
 		1893A4CD2ABF6B12007CD8C7 /* PlayerBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1893A4CC2ABF6B12007CD8C7 /* PlayerBaseViewController.swift */; };
 		1893A4D12ABF7315007CD8C7 /* Tracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1893A4D02ABF7315007CD8C7 /* Tracks.swift */; };
 		1893A4D42ABF7523007CD8C7 /* IPodNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1893A4D32ABF7523007CD8C7 /* IPodNavigationController.swift */; };
-		1893A4D62ABF8B79007CD8C7 /* IPodNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1893A4D52ABF8B79007CD8C7 /* IPodNavigationView.swift */; };
 		18BD308E29FFF1B000F0C279 /* UIView+InnerShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD308D29FFF1B000F0C279 /* UIView+InnerShadow.swift */; };
 		18E20CCD29C0B5E400E9E16C /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E20CCC29C0B5E400E9E16C /* UIView+Gradient.swift */; };
 		18E20CCF29C0BBBC00E9E16C /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E20CCE29C0BBBC00E9E16C /* PlayerView.swift */; };
@@ -153,7 +152,6 @@
 		1893A4CC2ABF6B12007CD8C7 /* PlayerBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerBaseViewController.swift; sourceTree = "<group>"; };
 		1893A4D02ABF7315007CD8C7 /* Tracks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracks.swift; sourceTree = "<group>"; };
 		1893A4D32ABF7523007CD8C7 /* IPodNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPodNavigationController.swift; sourceTree = "<group>"; };
-		1893A4D52ABF8B79007CD8C7 /* IPodNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPodNavigationView.swift; sourceTree = "<group>"; };
 		18BD308D29FFF1B000F0C279 /* UIView+InnerShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+InnerShadow.swift"; sourceTree = "<group>"; };
 		18E20CCC29C0B5E400E9E16C /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
 		18E20CCE29C0BBBC00E9E16C /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
@@ -503,7 +501,6 @@
 			isa = PBXGroup;
 			children = (
 				1893A4D32ABF7523007CD8C7 /* IPodNavigationController.swift */,
-				1893A4D52ABF8B79007CD8C7 /* IPodNavigationView.swift */,
 			);
 			path = MyNavigationController;
 			sourceTree = "<group>";
@@ -691,7 +688,6 @@
 			files = (
 				1893A4CD2ABF6B12007CD8C7 /* PlayerBaseViewController.swift in Sources */,
 				18904A5F29C06C2D00123C9E /* NavBarView.swift in Sources */,
-				1893A4D62ABF8B79007CD8C7 /* IPodNavigationView.swift in Sources */,
 				18904A3A29C067AD00123C9E /* PlayerButton.swift in Sources */,
 				18904A5B29C06BE600123C9E /* Colors.swift in Sources */,
 				18904A4029C0688300123C9E /* IPodGestureRecognizer.swift in Sources */,

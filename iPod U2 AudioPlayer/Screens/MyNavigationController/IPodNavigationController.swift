@@ -7,14 +7,15 @@
 
 import UIKit
 
-class IPodNavigationController: UINavigationController {
+final class IPodNavigationController: UINavigationController {
     
-    private let navBarView = NavBarView(header: "Songs")
+    private let navBarView = NavBarView()
+    
+    private let innerShadow = CALayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationBar.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 35)
-        additionalSafeAreaInsets = UIEdgeInsets(top: 35, left: 0, bottom: 0, right: 0)
+        sizeAdjustment()
         prepareView()
         setViewHierarhies()
         setupConstraints()
@@ -22,6 +23,17 @@ class IPodNavigationController: UINavigationController {
     
     private func prepareView() {
         navigationBar.isHidden = true
+        self.view.layer.addSublayer(innerShadow)
+    }
+    
+    private func sizeAdjustment() {
+        navigationBar.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 35)
+        additionalSafeAreaInsets = UIEdgeInsets(top: 35, left: 0, bottom: 0, right: 0)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.view.addInnerShadow(layer: innerShadow)
     }
     
     private func setupConstraints() {
@@ -35,5 +47,13 @@ class IPodNavigationController: UINavigationController {
     
     private func setViewHierarhies() {
         self.view.addSubview(navBarView)
+    }
+    
+    public func setupNavigationBar(leftItem: UIImage?, header: String) {
+        navBarView.setupNavigationBar(leftItem: leftItem, header: header)
+    }
+    
+    public func setStatePlayer(state: StatePlayer) {
+        navBarView.setStateCurrent(state: state)
     }
 }

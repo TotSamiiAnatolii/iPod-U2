@@ -21,3 +21,8 @@ enum StatePlayer {
     case pause
     case play
 }
+
+enum ScreenTitle: String {
+    case selectTrack = "Soungs"
+    case player = "Now playing"
+}

@@ -10,9 +10,7 @@ import UIKit
 final class SelectTrackView: UIView {
    
     private let innerShadow = CALayer()
-  
-    private let navBarView = NavBarView(header: "Songs")
-        
+          
     private let borderWidth: CGFloat = 0.7
         
     private let borderColor = Colors.borderDisplayColor

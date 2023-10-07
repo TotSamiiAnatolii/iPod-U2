@@ -27,8 +27,7 @@ final class NavBarView: UIView {
         .setMyStyle()
         .setImage(image: Images.battery)
     
-    init(header: String) {
-        self.header.text = header
+    init() {
         super.init(frame: .zero)
         setupGradientView()
         setViewHierarhies()
@@ -38,7 +37,7 @@ final class NavBarView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override class var layerClass: AnyClass {
         return CAGradientLayer.self
     }
@@ -51,6 +50,15 @@ final class NavBarView: UIView {
         gradientView.colors = [Colors.topColorNavBar, Colors.bottomColorNavBar]
         gradientView.locations = [0.0, 1.0]
         gradientView.frame = self.bounds
+    }
+    
+    public func setStateCurrent(state: StatePlayer) {
+        switch state {
+        case .pause:
+            self.imageCurrentState.image = Images.pause
+        case .play:
+            self.imageCurrentState.image = Images.play
+        }
     }
     
     private func setViewHierarhies() {
@@ -85,5 +93,10 @@ final class NavBarView: UIView {
             imageCurrentState.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             imageCurrentState.leftAnchor.constraint(equalTo: self.leftAnchor, constant: indent)
         ])
+    }
+    
+    public func setupNavigationBar(leftItem: UIImage?, header: String) {
+        self.header.text = header
+        self.imageCurrentState.image = leftItem
     }
 }
