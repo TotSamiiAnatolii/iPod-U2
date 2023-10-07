@@ -34,7 +34,7 @@ final class PlayerViewController: PlayerBaseViewController<PlayerView> {
     override func viewDidLoad() {
         super.viewDidLoad()
         setTrack(track: model)
-        setupNavigationBar(letftItem: Images.play, header: ScreenTitle.player.rawValue)
+        configureNavigationBar(letftItem: Images.play, header: ScreenTitle.player.rawValue)
     }
     
     init(parentControl: ContainerViewController, model: ModelTrack) {

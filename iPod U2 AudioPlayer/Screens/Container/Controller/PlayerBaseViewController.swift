@@ -42,7 +42,7 @@ class PlayerBaseViewController<ContentView: UIView>: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    open func setupNavigationBar(letftItem: UIImage?, header: String) {
+    open func configureNavigationBar(letftItem: UIImage?, header: String) {
         guard let navControl = self.navigationController as? IPodNavigationController else { return
         }
         navControl.setupNavigationBar(leftItem: letftItem, header: header)
