@@ -52,11 +52,10 @@ final class SelectTrackViewController: PlayerBaseViewController<SelectTrackView>
     
     override func viewDidLoad() {
         super.viewDidLoad()        
-        settingView()
+        prepareViews() 
         prepareTableView()
         modelsCell = map(model: tracks)
         setStartTrack()
-        contentView.tableView.contentInsetAdjustmentBehavior = .never
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -87,7 +86,7 @@ final class SelectTrackViewController: PlayerBaseViewController<SelectTrackView>
         contentView.tableView.dataSource = self
     }
     
-    private func settingView() {
+    private func prepareViews() {
         self.view.translatesAutoresizingMaskIntoConstraints = true
     }
     
