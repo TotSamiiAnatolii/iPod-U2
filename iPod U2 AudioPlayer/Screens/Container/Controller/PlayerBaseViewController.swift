@@ -23,8 +23,7 @@ class PlayerBaseViewController<ContentView: UIView>: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.translatesAutoresizingMaskIntoConstraints = true
-        
+        prepareView() 
         parentControl?.onAction = {[weak self] type in
             guard let self = self else {
                 return
@@ -50,5 +49,9 @@ class PlayerBaseViewController<ContentView: UIView>: UIViewController {
     
     open func switchButton(sender: ButtonPlayer)  {
         
+    }
+    
+    open func prepareView() {
+        self.view.translatesAutoresizingMaskIntoConstraints = true
     }
 }
