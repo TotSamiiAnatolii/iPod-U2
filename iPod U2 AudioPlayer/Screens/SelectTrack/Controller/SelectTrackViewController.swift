@@ -52,7 +52,7 @@ final class SelectTrackViewController: PlayerBaseViewController<SelectTrackView>
     
     override func viewDidLoad() {
         super.viewDidLoad()        
-        prepareViews() 
+        prepareViews()
         prepareTableView()
         modelsCell = map(model: tracks)
         setStartTrack()
@@ -171,16 +171,6 @@ extension SelectTrackViewController: UITableViewDelegate, UITableViewDataSource 
         if tracks[indexPath.row].isSelected  {
             cell.isSelected = true
         }
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
-    {
-        return CGFloat.leastNormalMagnitude
-    }
-
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat
-    {
-        return CGFloat.leastNormalMagnitude
     }
 }
 extension SelectTrackViewController: PlayerIPodDelegate {
