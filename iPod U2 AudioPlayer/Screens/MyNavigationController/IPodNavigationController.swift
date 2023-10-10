@@ -27,8 +27,9 @@ final class IPodNavigationController: UINavigationController {
     }
     
     private func sizeAdjustment() {
-        navigationBar.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 35)
-        additionalSafeAreaInsets = UIEdgeInsets(top: 35, left: 0, bottom: 0, right: 0)
+        let heightNavBar = navigationBar.frame.height * 0.8
+        navigationBar.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: heightNavBar)
+        additionalSafeAreaInsets = UIEdgeInsets(top: heightNavBar, left: 0, bottom: 0, right: 0)
     }
     
     override func viewDidLayoutSubviews() {
