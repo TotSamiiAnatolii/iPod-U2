@@ -39,8 +39,6 @@
 		18904A5C29C06BE600123C9E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A5A29C06BE600123C9E /* Colors.swift */; };
 		18904A5D29C06BE600123C9E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A5A29C06BE600123C9E /* Colors.swift */; };
 		18904A5F29C06C2D00123C9E /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A5E29C06C2D00123C9E /* NavBarView.swift */; };
-		18904A6029C06C2D00123C9E /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A5E29C06C2D00123C9E /* NavBarView.swift */; };
-		18904A6129C06C2D00123C9E /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A5E29C06C2D00123C9E /* NavBarView.swift */; };
 		18904A6429C06C8E00123C9E /* UILabel+MyStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A6329C06C8E00123C9E /* UILabel+MyStyle.swift */; };
 		18904A6529C06C8E00123C9E /* UILabel+MyStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A6329C06C8E00123C9E /* UILabel+MyStyle.swift */; };
 		18904A6629C06C8E00123C9E /* UILabel+MyStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18904A6329C06C8E00123C9E /* UILabel+MyStyle.swift */; };
@@ -420,7 +418,6 @@
 			isa = PBXGroup;
 			children = (
 				18904A7B29C06EA500123C9E /* SelectTrackView.swift */,
-				18904A5E29C06C2D00123C9E /* NavBarView.swift */,
 				18904A9C29C070F500123C9E /* Cell */,
 			);
 			path = View;
@@ -501,6 +498,7 @@
 			isa = PBXGroup;
 			children = (
 				1893A4D32ABF7523007CD8C7 /* IPodNavigationController.swift */,
+				18904A5E29C06C2D00123C9E /* NavBarView.swift */,
 			);
 			path = MyNavigationController;
 			sourceTree = "<group>";
@@ -740,7 +738,6 @@
 				18904A9F29C0711600123C9E /* SelectTrackCell.swift in Sources */,
 				18904A7929C06E5700123C9E /* SelectTrackViewController.swift in Sources */,
 				18904A7D29C06EA500123C9E /* SelectTrackView.swift in Sources */,
-				18904A6029C06C2D00123C9E /* NavBarView.swift in Sources */,
 				18904A9329C0702F00123C9E /* PlayerIPod.swift in Sources */,
 				18904A6529C06C8E00123C9E /* UILabel+MyStyle.swift in Sources */,
 				18904A8B29C06FF400123C9E /* PlayerAppSounds.swift in Sources */,
@@ -767,7 +764,6 @@
 				18904A6629C06C8E00123C9E /* UILabel+MyStyle.swift in Sources */,
 				18904A8C29C06FF400123C9E /* PlayerAppSounds.swift in Sources */,
 				18904A7A29C06E5700123C9E /* SelectTrackViewController.swift in Sources */,
-				18904A6129C06C2D00123C9E /* NavBarView.swift in Sources */,
 				18904A7329C06DB600123C9E /* ModelTrack.swift in Sources */,
 				18904A2129C0643100123C9E /* iPod_U2_AudioPlayerUITestsLaunchTests.swift in Sources */,
 			);
