@@ -18,6 +18,10 @@ final class ContainerViewController: UIViewController {
         return view
     }
     
+    private lazy var navVC: UINavigationController = {
+        prepareChildViewController()
+    }()
+    
     override func loadView() {
         super.loadView()
         self.view = ContainerView(frame: UIScreen.main.bounds)
@@ -28,16 +32,14 @@ final class ContainerViewController: UIViewController {
 
         self.navigationController?.navigationBar.isHidden = true
         containerView.controlModule.delegate = self
-        showChildViewController()
+        self.addChild(navVC)
     }
 
-    private func showChildViewController() {
+    private func prepareChildViewController() -> UINavigationController {
         let selectTrackVC = SelectTrackViewController(parentControl: self)
     
         let navSelectTrackVC = IPodNavigationController(rootViewController: selectTrackVC)
-        
-        self.addChild(navSelectTrackVC)
-        
+                
         navSelectTrackVC.view.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.addSubview(navSelectTrackVC.view)
@@ -48,6 +50,8 @@ final class ContainerViewController: UIViewController {
             navSelectTrackVC.view.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             navSelectTrackVC.view.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor)
         ])
+        
+        return navSelectTrackVC
     }
 
     private func switchButton(sender: ButtonPlayer)  {
