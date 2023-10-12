@@ -12,9 +12,7 @@ protocol ControlActionable {
 }
 
 class PlayerBaseViewController<ContentView: UIView>: UIViewController, ControlActionable {
-    
-//    weak var parentControl: ContainerViewController?
-        
+            
     open var contentView: ContentView {
         guard let view = self.view as? ContentView else { return ContentView()}
         return view
@@ -51,9 +49,9 @@ class PlayerBaseViewController<ContentView: UIView>: UIViewController, ControlAc
     open func prepareView() {
         self.view.translatesAutoresizingMaskIntoConstraints = true
     }
+    
     func onAction(sender: ButtonPlayer) {
         
     }
-
 }
 
