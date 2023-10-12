@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol ControlActionable {
+    func onAction(sender: ButtonPlayer)
+}
+
 class PlayerBaseViewController<ContentView: UIView>: UIViewController {
     
     weak var parentControl: ContainerViewController?
@@ -53,5 +57,11 @@ class PlayerBaseViewController<ContentView: UIView>: UIViewController {
     
     open func prepareView() {
         self.view.translatesAutoresizingMaskIntoConstraints = true
+    }
+}
+extension PlayerBaseViewController: ControlActionable {
+  
+    func onAction(sender: ButtonPlayer) {
+        
     }
 }

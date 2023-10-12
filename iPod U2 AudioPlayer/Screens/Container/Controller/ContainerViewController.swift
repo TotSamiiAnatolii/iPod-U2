@@ -38,20 +38,20 @@ final class ContainerViewController: UIViewController {
     private func prepareChildViewController() -> UINavigationController {
         let selectTrackVC = SelectTrackViewController(parentControl: self)
     
-        let navSelectTrackVC = IPodNavigationController(rootViewController: selectTrackVC)
+        let navigationController = IPodNavigationController(rootViewController: selectTrackVC)
                 
-        navSelectTrackVC.view.translatesAutoresizingMaskIntoConstraints = false
+        navigationController.view.translatesAutoresizingMaskIntoConstraints = false
         
-        self.view.addSubview(navSelectTrackVC.view)
+        self.view.addSubview(navigationController.view)
         
         NSLayoutConstraint.activate([
-            navSelectTrackVC.view.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.9),
-            navSelectTrackVC.view.heightAnchor.constraint(equalToConstant: 300),
-            navSelectTrackVC.view.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            navSelectTrackVC.view.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor)
+            navigationController.view.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.9),
+            navigationController.view.heightAnchor.constraint(equalToConstant: 300),
+            navigationController.view.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            navigationController.view.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor)
         ])
         
-        return navSelectTrackVC
+        return navigationController
     }
 
     private func switchButton(sender: ButtonPlayer)  {
