@@ -37,9 +37,9 @@ final class PlayerViewController: PlayerBaseViewController<PlayerView> {
         configureNavigationBar(letftItem: Images.play, header: ScreenTitle.player.rawValue)
     }
     
-    init(parentControl: ContainerViewController, model: ModelTrack) {
+    init(model: ModelTrack) {
         self.model = model
-        super.init(parentControl: parentControl)
+        super.init()
     }
     
     required init?(coder: NSCoder) {
@@ -64,6 +64,10 @@ final class PlayerViewController: PlayerBaseViewController<PlayerView> {
         case .back:
             PlayerIPod.shared.buttonGoToBackSec()
         }
+    }
+    
+    override func onAction(sender: ButtonPlayer) {
+        self.switchButton(sender: sender)
     }
     
     private func configureView(model: ModelTrack) {

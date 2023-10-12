@@ -11,9 +11,9 @@ protocol ControlActionable {
     func onAction(sender: ButtonPlayer)
 }
 
-class PlayerBaseViewController<ContentView: UIView>: UIViewController {
+class PlayerBaseViewController<ContentView: UIView>: UIViewController, ControlActionable {
     
-    weak var parentControl: ContainerViewController?
+//    weak var parentControl: ContainerViewController?
         
     open var contentView: ContentView {
         guard let view = self.view as? ContentView else { return ContentView()}
@@ -27,17 +27,10 @@ class PlayerBaseViewController<ContentView: UIView>: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        prepareView() 
-        parentControl?.onAction = {[weak self] type in
-            guard let self = self else {
-                return
-            }
-            self.switchButton(sender: type)
-        }
+        prepareView()
     }
     
-    init(parentControl: ContainerViewController) {
-        self.parentControl = parentControl
+    init() {
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -58,10 +51,9 @@ class PlayerBaseViewController<ContentView: UIView>: UIViewController {
     open func prepareView() {
         self.view.translatesAutoresizingMaskIntoConstraints = true
     }
-}
-extension PlayerBaseViewController: ControlActionable {
-  
     func onAction(sender: ButtonPlayer) {
         
     }
+
 }
+

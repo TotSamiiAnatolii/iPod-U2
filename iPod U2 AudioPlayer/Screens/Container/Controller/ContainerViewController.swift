@@ -8,8 +8,6 @@
 import UIKit
 
 final class ContainerViewController: UIViewController {
-
-    public var onAction: ((ButtonPlayer) -> Void)?
     
     fileprivate var containerView: ContainerView {
         guard let view = self.view as? ContainerView else {
@@ -36,7 +34,7 @@ final class ContainerViewController: UIViewController {
     }
 
     private func prepareChildViewController() -> UINavigationController {
-        let selectTrackVC = SelectTrackViewController(parentControl: self)
+        let selectTrackVC = SelectTrackViewController()
     
         let navigationController = IPodNavigationController(rootViewController: selectTrackVC)
                 
@@ -55,7 +53,10 @@ final class ContainerViewController: UIViewController {
     }
 
     private func switchButton(sender: ButtonPlayer)  {
-        onAction?(sender)
+        
+        guard let vc =  navVC.children.compactMap({$0 as? ControlActionable}).last else { return
+        }
+        vc.onAction(sender: sender)
     }
 }
 extension ContainerViewController: ControlModuleDelegate {

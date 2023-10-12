@@ -37,8 +37,8 @@ final class SelectTrackViewController: PlayerBaseViewController<SelectTrackView>
         }
     }
     
-    override init(parentControl: ContainerViewController) {
-        super.init(parentControl: parentControl)
+    override init() {
+        super.init()
     }
     
     required init?(coder: NSCoder) {
@@ -61,9 +61,13 @@ final class SelectTrackViewController: PlayerBaseViewController<SelectTrackView>
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureNavigationBar(letftItem: nil, header: ScreenTitle.selectTrack.rawValue)
-        parentControl!.onAction = { type in
-            self.switchButton(sender: type)
-        }
+//        parentControl!.onAction = { type in
+//            self.switchButton(sender: type)
+//        }
+    }
+    
+    override func onAction(sender: ButtonPlayer) {
+        self.switchButton(sender: sender)
     }
 
     private func searchIndexNextTrack(id: UUID) -> Int {
@@ -76,7 +80,7 @@ final class SelectTrackViewController: PlayerBaseViewController<SelectTrackView>
     }
     
     private func preparationForTransition() {
-        let playerVC = PlayerViewController(parentControl: parentControl!, model: tracks[lastIndex.row])
+        let playerVC = PlayerViewController(model: tracks[lastIndex.row])
         playerVC.delegate = self
         navigationController?.pushViewController(playerVC, animated: true)
     }
