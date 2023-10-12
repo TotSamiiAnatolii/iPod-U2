@@ -61,9 +61,6 @@ final class SelectTrackViewController: PlayerBaseViewController<SelectTrackView>
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureNavigationBar(letftItem: nil, header: ScreenTitle.selectTrack.rawValue)
-//        parentControl!.onAction = { type in
-//            self.switchButton(sender: type)
-//        }
     }
     
     override func onAction(sender: ButtonPlayer) {
