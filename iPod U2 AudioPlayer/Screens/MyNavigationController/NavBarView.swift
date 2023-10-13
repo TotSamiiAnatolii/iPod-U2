@@ -45,7 +45,7 @@ final class NavBarView: UIView {
     private func setupGradientView() {
         self.translatesAutoresizingMaskIntoConstraints = false
         guard let gradientView = self.layer as? CAGradientLayer else {
-            return;
+            return
         }
         gradientView.colors = [Colors.topColorNavBar, Colors.bottomColorNavBar]
         gradientView.locations = [0.0, 1.0]
